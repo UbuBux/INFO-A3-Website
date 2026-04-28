@@ -7,55 +7,95 @@ img {
     height: auto;
 }
 
+h1 {
+
+}
+
+h2 {
+    text-align: center;
+}
+
 /* Nav bar bg colour */
 nav {
     background-color: black;
     overflow: hidden;
-    align-items: center;
-    position: relative;
     display: flex;
-    padding: 1% 3%;
-    margin: 0;
+    align-items: center;
     border-radius: 0 0 20px 20px;
+    padding: 1em;
 }
 
 /* Nav links */
-nav a {
-    color: white;
-    text-align: center;
-    padding: 0.5em 1em;
-}
-
-/* Nav Logo (right) */
+/* LOGO (LEFT) */
 .nav-logo {
-    margin-right: auto;
+    margin-left: auto;
 }
 
 .nav-logo img {
-    width: auto;
-    max-height: 80px;
+    max-width: 30%;
 }
 
-/* Middle Nav Links */
-.middle-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    padding: 0.5em;
-}
 
+/* LINKS (MIDDLE) */
 .middle-links a {
+    color: white;
     text-decoration: none;
+    padding: 2rem;
 }
 
-/* Icons (left) */
+/* ICONS (RIGHT) */
 .right-icons {
-    margin-left: auto;
-    display: flex;
+    margin-right: auto;
 }
 
 .right-icons img {
-    width: auto;
-    max-height: 25%;
+    max-width: 10%;
+    
+}
+
+/* BANNER */
+
+
+/* ARTICLES */
+
+
+/* HEADINGS */
+.heading-w-icons {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-w-icons img {
+    width: 3%;
+    height: 6%;
+    padding: 1rem;
+}
+
+/* HOME PAGE - WHY CHOOSE KUSTOM KENNELS? */
+/* SELLING POINTS (IMAGES) */
+.three-cs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+}
+
+.three-cs img {
+    max-width: 20%;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent),
+        url("KK Website Images/comfortable.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Footer */
+footer {
+    background-color: black;
+    border-radius: 20px 20px 0 0;
 }
