@@ -41,6 +41,13 @@ nav {
     max-width: 20px;
 }
 
+/* DIVIDERS */
+.long-divider {
+    max-width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
 /* FOOTER */
 footer {
     background-color: black;

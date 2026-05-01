@@ -27,13 +27,35 @@
     margin: 3%;
 }
 
-.three-cs img {
+#img-chew-resistant {
     height: 300px;
     width: 300px;
     border-radius: 20px;
     margin: 1rem;
     background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent),
-        url("KK Website Images/comfortable.png");
+        url("kk-website-images/dog-infront-of-house.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#img-customisable {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 1rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent),
+        url("kk-website-images/customisable.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#img-comfortable {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 1rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent),
+        url("kk-website-images/comfortable.png");
     background-size: cover;
     background-position: center;
 }
