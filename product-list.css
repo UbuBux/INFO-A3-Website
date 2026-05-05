@@ -1,0 +1,17 @@
+#shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10rem;
+    margin: 5rem 10rem;
+
+
+}
+
+.product-card {
+    border: 1px solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 1em;
+    align-items: center;
+    text-align: center;
+}

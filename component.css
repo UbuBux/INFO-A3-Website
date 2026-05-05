@@ -43,6 +43,21 @@ nav {
     max-width: 20px;
 }
 
+/* HEADINGS */
+.heading-w-icons {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-w-icons img {
+    width: 3%;
+    height: 6%;
+    padding: 1rem;
+}
+
+
 /* DIVIDERS */
 .long-divider {
     max-width: 60%;
