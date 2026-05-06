@@ -9,6 +9,9 @@ nav {
     padding: 1rem 2rem;
     margin: 0;
     box-shadow: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* LOGO (LEFT) */
@@ -44,6 +47,10 @@ nav {
 }
 
 /* HEADINGS */
+header {
+    background-color: #415E39;
+}
+
 .heading-w-icons {
     display: flex;
     padding: 1rem;
@@ -67,11 +74,19 @@ nav {
 
 /* MARQUEES */
 marquee {
-    height: 2rem;
+    height: 4rem;
     color: white;
     background-color: #415E39;
-    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
+    
     align-content: center;
+    overflow: hidden;
+}
+
+marquee div {
+    display: flex;
+    gap: 3em;
 }
 
 /* FOOTER */
