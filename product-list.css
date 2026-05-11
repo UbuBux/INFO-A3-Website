@@ -18,6 +18,13 @@
     align-items: center;
     text-align: center;
     position: relative;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 5px;
+    transition: 0.2s;
 }
 
 .product-card img {

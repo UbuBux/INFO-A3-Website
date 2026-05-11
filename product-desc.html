@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+        <link rel="stylesheet" type="text/css" href="component.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="product-desc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <!-- Navigation Bar -->
+
+        <nav>
+            <div class="nav-logo">
+                <a href=""><img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo"></a>
+            </div>
+
+            <!-- Links in the Middle -->
+            <div class="middle-links">
+                <a href="index.html">Home</a>
+                <a href="product-list.html">Shop</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+
+            <!-- Links in the Middle -->
+            <div class="right-icons">
+                <a class="nav-profile" href=""><img src="icons/user-profile.png" alt="User Profile icon"></a>
+                <a class="nav-search" href=""><img src="icons/search.png" alt="Search icon"></a>
+                <a class="nav-cart" href=""><img src="icons/cart.png" alt="Shopping Cart icon"></a>
+            </div>
+
+        </nav>
+
+        <!-- Marquee Banner -->
+        <marquee width="100%" direction="right" height="100px">
+            <div>  
+                <p>Customisable</p>
+                <p>Australian Made</p>
+                <p>Durable</p>
+                <p>Stylish</p>
+            </div>  
+        </marquee>
+        
+
+    </header>  
     <main id="product-desc">
+        <!-- Shortcut Links at the Top -->
+        <ul id="shortcut-links">
+            <li>Shop</li>
+            <li>/</li>
+            <li id="list-product-name"></li>
+        </ul>
+
+        <!-- Carousel of Images -->
+        <img id="pro-img-1" src="" alt="">
+
+        <!-- Details -->
+        <h2 id="product-name"></h2>
+
+        <h3 id="product-price"></h3>
+
+
+
 
     </main>
+
+    <footer>
+        <!-- Logo in Footer (left) -->
+        <div class="footer-flex-middle">
+            <img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo">
+        
+        <!-- Links in Footer (right) -->
+        
+            <div class="footer-middle-links">
+                <a href="index.html">Home</a>
+                <a href="product-list.html">Shop</a>
+            </div>
+
+            <div class="footer-middle-links">
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </div>    
+
+        <p>
+            <strong>Acknowledgement</strong><br>
+            Kustom Kennels acknowledges the traditional owners of the country where we work and live, the Bunurong and Wurundjeri Woi Wurrung people of the Kulin Nation.
+        </p>
+    </footer>
+
+    <script src="product-desc.js"></script>
 </body>
 </html>
