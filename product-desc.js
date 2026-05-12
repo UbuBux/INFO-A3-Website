@@ -1,4 +1,29 @@
-document.addEventListener("DOMContentLoaded", showDetails)
+document.addEventListener("DOMContentLoaded", () => {
+
+    showDetails()
+
+    // CART OVERLAY //
+    // Create variables 1) open cart 2) show cart 3) close cart //
+    const cartIcon = document.querySelector('#nav-cart')
+    const cart = document.querySelector('#cart-overlay')
+    const cartClose = document.querySelector('#cart-close-btn')
+
+    console.log(cartIcon)
+    console.log(cart)
+    console.log(cartClose)
+
+    // When cart icon is clicked, add class "open" to the overlay - this will make it visible
+    cartIcon.addEventListener("click", () => {
+        event.preventDefault()
+        cart.classList.add("open-cart")
+    })
+
+    // When close overlay button is clicked, "open" class will be removed and overlay will disappear
+    cartClose.addEventListener("click", () => {
+        cart.classList.remove("open-cart")
+    })
+
+})
 
 // ARRAY OF PRODUCTS //
 
@@ -94,3 +119,6 @@ function showDetails() {
     document.getElementById("product-name").textContent = product.name
     document.getElementById("product-price").textContent = "$" + product.price
 }
+
+
+

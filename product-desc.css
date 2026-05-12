@@ -61,3 +61,22 @@ section {
     color: white;
     font-size: medium;
 }
+
+#cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    width: 25vw;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 3%;
+    z-index: 1000;
+    overflow: auto;
+    transition: 0.5s;
+}
+
+#cart-overlay.open-cart {
+    visibility: visible;
+}
