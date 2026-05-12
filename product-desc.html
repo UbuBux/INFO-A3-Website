@@ -47,25 +47,91 @@
             </div>  
         </marquee>
         
+        
 
     </header>  
+    <br>
     <main id="product-desc">
-        <!-- Shortcut Links at the Top -->
-        <ul id="shortcut-links">
-            <li>Shop</li>
-            <li>/</li>
-            <li id="list-product-name"></li>
-        </ul>
+        
+        <!-- Images and Details on the LEFT -->
 
-        <!-- Carousel of Images -->
-        <img id="pro-img-1" src="" alt="">
+        <aside>
+            <!-- Shortcut Links at the Top -->
+            <ul id="shortcut-links">
+                <li><a href="index.html">Home</a></li>
+                <li>/</li>
+                <li><a href="product-list.html">Shop</a></li>
+                <li>/</li>
+                <li id="product-path-name"></li>
+            </ul>
 
+            <!-- Carousel of Images -->
+            <img id="pro-img-1" src="" alt="">
+        </aside>
+
+        <!-- Images and Details on the RIGHT -->
+
+        <section>
         <!-- Details -->
-        <h2 id="product-name"></h2>
+            <h2 id="product-name"></h2>
 
-        <h3 id="product-price"></h3>
+            <h3 id="product-price"></h3>
 
 
+            <!-- Buttons -->
+            <!-- Quantity -->
+            <p>Quantity</p>
+            <ul id="quantity-buttons">
+                <li><button id="increase-quan">+</button></li>
+                <li>0</li>
+                <li><button id="decrease-quan">-</button></li>
+            </ul>
+
+            <button id="add-to-cart">Add To Cart</button>
+
+            <!-- Divider -->
+            <img src="icons/small-divider.png" alt="Page divider">
+        </section>
+
+
+        <section class="cart-overlay" id="class-overlay">
+            <!-- Close Overlay Button -->
+            <button id="overlay-close-btn">
+                close
+            </button>
+
+            <!-- Cart icon with number -->
+            <div class="cart-indicator">
+
+            </div>
+
+            <!-- Item -->
+            <div>
+                <!-- Divider -->
+
+                <!-- Image -->
+
+                <!-- Name -->
+
+                <!-- Price -->
+
+                <!-- Quantity -->
+
+                <!-- Trash -->
+
+
+            </div>
+
+            <!-- Order Summary -->
+            <table>
+                <tr id="checkout-categories">
+                    <td>Subtotal</td>
+                    <td>Total (with GST)</td>
+                    <td>Shipping Total Calculated at Checkout</td>
+                </tr>
+            </table>
+
+        </section>
 
 
     </main>

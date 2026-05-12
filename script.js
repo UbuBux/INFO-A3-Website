@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM is ready!');
-    showProducts();
-});
+document.addEventListener("DOMContentLoaded", showProducts)
 
 // ARRAY OF PRODUCTS //
 
@@ -11,12 +8,15 @@ let products = [
         name: "Standard Small", 
         price: 799.00, 
         image: "kk-website-images/standard-small.png",
+        description: "Insulated walls/roof (aircell foam) 12mm painted plyboard base, Hardwood plybraced walls, Rolled steel frame UNCHEWABLE, colorbond sheets and flashings, 300mm front overhang for weather protection. Optional extras for this model - Flip Top Lid,  Swing Door, dog flaps, castor wheels, merbua posts and merbua front verandah. If our set sizes do not suit your space please get in contact with us and we can make alterations.",
+        kennelInfo: "Externally (mm) : 750w x 600d x 750h + 300mm front overhang. Internally: 50mm less all round. Weight: 15-20kg"
     },
     {
         id: 1,
         name: "Standard Medium", 
         price: 999.00,
         image: "kk-website-images/standard-medium.png",
+        
     },
     {
         id: 2,
@@ -110,6 +110,14 @@ function addCard(image, name, price, id, cardName) {
     let newPrice = document.createElement('h4')
     newPrice.textContent = "$" + price + ".00"
     newDiv.appendChild(newPrice)
+
+    // create new button (add to cart)
+    let quickAdd = document.createElement('button')
+    quickAdd.textContent = "Add To Cart"
+    newDiv.appendChild(quickAdd)
+    quickAdd.onclick = function () {
+
+    }
 
     newDiv.onclick = function () {
         window.location.href = `product-desc.html?id=${id}`
