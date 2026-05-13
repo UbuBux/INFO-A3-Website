@@ -106,30 +106,47 @@
             </div>
 
             <!-- Item -->
-            <div>
-                <!-- Divider -->
-                <hr>
-                <!-- Image -->
-                <img id="cart-img" src="" alt="">
+            <table id="display-cart-items">
 
-                <!-- Name -->
-                <h3 id="cart-name"></h3>
+                <!-- TABLE HEADER - Divider -->
+                <th colspan="2">
+                    <hr>
+                </th>
 
-                <!-- Price -->
-                <h4 id="cart-price"></h4>
+                <!-- COL 1 (MERGE 4 ROWS) - Image -->
+                <tr rowspan="4">
+                        <img id="cart-img" src="" alt="">
+                </tr>
 
-                <!-- Quantity -->
-                <ul id="quantity-buttons">
-                    <li><button id="increase-quan">+</button></li>
-                    <li>0</li>
-                    <li><button id="decrease-quan">-</button></li>
-                </ul>
+                
+                <tr>
+                    <!-- COL 2, ROW 1 - Name -->
+                    <td>
+                        <h3 id="cart-name"></h3>
+                    </td>
 
-                <!-- Trash -->
-                <button id="cart-trash">trash</button>
+                    <!-- COL 2, ROW 2 - Price -->
+                    <td>
+                        <h4 id="cart-price"></h4>
+                    </td>
+
+                    <!-- COL 2, ROW 3 - Quantity -->
+                    <td>
+                        <ul id="quantity-buttons">
+                            <li><button id="increase-quan">+</button></li>
+                            <li>0</li>
+                            <li><button id="decrease-quan">-</button></li>
+                        </ul>
+                    </td>
+
+                    <!-- COL 2, ROW 4 - Trash -->
+                    <td>
+                        <button id="cart-trash">trash</button>
+                    </td>
+                </tr>
 
 
-            </div>
+            </table>
 
             <!-- Order Summary -->
             <table>

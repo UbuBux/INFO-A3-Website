@@ -92,7 +92,7 @@ function addCard(image, name, price, id, cardName) {
 
     // create empty div and append to shop grid
     let newDiv = document.createElement('div')
-    newDiv.classList.add(cardName);
+    newDiv.classList.add(cardName)
     shopGrid.appendChild(newDiv)
 
     /* create new image and append to div */
