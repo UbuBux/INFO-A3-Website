@@ -58,11 +58,24 @@ nav {
 }
 
 /* HERO IMG */
-.hero-img {
-    width: 100%;
-    display: block;
-    background-image: url(kk-website-images/new-hero-img.png);
+#hero-img-index {
+    background-image: url('kk-website-images/new-hero-img.png');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100vw;
+    height: 100%;
+    
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* BUTTON ON HERO-IMG - Browse Shop */
+.cta-btn {
+    
 }
 
 /* HEADINGS */
