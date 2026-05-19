@@ -221,8 +221,38 @@ function displayInCart() {
     })
 }
 
-// ONCLICK FOR PRODUCT DESCRIPTION // 
-// Add to cart button //
+// INCREASE AND DECREASE QUANTITY //
+function increaseQty(id) {
+    const item = cart.find(product => product.id === id)
+    item.quantity += 1
+
+    saveCart()
+}
+
+function decreaseQty(id) {
+    const item = cart.find(product => product.id === id)
+
+    item.quantity -= 1
+
+    if (item.quantity <= 0) {
+        cart = cart.filter(p => p.id !== id)
+    }
+
+    saveCart()
+}
+
+// SAVE CART INFO //
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart))
+    displayInCart()
+}
+
+//REMOVE ITEMS WITH TRASH BUTTON //
+function removeItem(id) {
+    cart = cart.filter(p => p.id !== id)
+    saveCart()
+}
+
 
 
 
