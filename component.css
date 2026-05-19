@@ -64,10 +64,10 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: 64vh;
     
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -75,7 +75,19 @@ nav {
 
 /* BUTTON ON HERO-IMG - Browse Shop */
 .cta-btn {
-    
+    margin-top: 6rem;
+    min-width: 10rem;
+    border: none;
+    background-color: #415E39;
+    color: white;
+    padding: 8%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cta-btn:hover {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
 }
 
 /* HEADINGS */
@@ -125,6 +137,57 @@ marquee div {
 marquee p {
     font-size: 0.8rem;
     animation: scroll 10s linear infinite;
+}
+
+/* PREVIEW SHOP */
+.preview-shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2% 10%;
+}
+
+/* cards */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* product card img (to put button on top) */
+.product-card-img-1 {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), 
+    transparent), url(kk-website-images/standard-small.png);
+    background-size: contain;
+
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 380 / 350;
+
+    padding: 5%;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.product-card a {
+    background-color: white;
+    height: fit-content;
+    color: black;
+    padding: 2% 3%;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.product-card article h3, .product-card article h4 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
+    height: fit-content;
 }
 
 

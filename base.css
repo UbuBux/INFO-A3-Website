@@ -2,10 +2,7 @@ body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
-    
-
 }
 
 img {
@@ -13,16 +10,34 @@ img {
     height: auto;
 }
 
+/* titles/headings of pages - used sparingly */
 h1 {
-
+    text-align: center;
 }
 
-h2 {
+/* product names - cards/prod desc pages */
+h3 {
     text-align: center;
+    font-size: 1.5em;
+}
+
+/* product price - cards/prod desc */
+h4 {
+    text-align: center;
+    font-size: 1em;
+}
+
+/* small bodies of text - descriptions, testimonials */
+h5 {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: italic;
 }
 
 button {
     font-family: "Montserrat", sans-serif;
+
 }
 
 /* LINKS */
