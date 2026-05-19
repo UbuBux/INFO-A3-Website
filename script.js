@@ -1,4 +1,29 @@
-document.addEventListener("DOMContentLoaded", showProducts)
+document.addEventListener("DOMContentLoaded", () => {
+
+    showProducts()
+
+    // CART OVERLAY //
+    // Create variables 1) open cart 2) show cart 3) close cart //
+    const cartIcon = document.querySelector('#nav-cart')
+    const cart = document.querySelector('#cart-overlay')
+    const cartClose = document.querySelector('#cart-close-btn')
+
+    console.log(cartIcon)
+    console.log(cart)
+    console.log(cartClose)
+
+    // When cart icon is clicked, add class "open" to the overlay - this will make it visible
+    cartIcon.addEventListener("click", (event) => {
+        event.preventDefault()
+        cart.classList.add("open-cart")
+    })
+
+    // When close overlay button is clicked, "open" class will be removed and overlay will disappear
+    cartClose.addEventListener("click", () => {
+        cart.classList.remove("open-cart")
+    })
+
+})
 
 // ARRAY OF PRODUCTS //
 
@@ -115,16 +140,90 @@ function addCard(image, name, price, id, cardName) {
     let quickAdd = document.createElement('button')
     quickAdd.textContent = "Add To Cart"
     newDiv.appendChild(quickAdd)
-    quickAdd.onclick = function () {
+    quickAdd.onclick = function (event) {
+        // currently, clicking the whole card takes user to prod desc.
+        event.stopPropagation()
 
+        addToCart(id)
     }
 
     newDiv.onclick = function () {
         window.location.href = `product-desc.html?id=${id}`
 }
+
 }
 
-// 
+
+
+
+
+// ADD ITEM TO CART //
+// empty array for products to be pushed // 
+// gets items from local storage (strings) and parses them into arrays again
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+function addToCart(productId) {
+    // find product object id in products array and check whether the id matches the id of the button clicked
+    const product = products.find(item => item.id === productId)
+
+    // add product o the array
+    const existingItem = cart.find(item => item.id === productId)
+
+    if (existingItem) {
+        existingItem.quantity += 1
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        })
+    }
+
+    // convert array to string and store in local storage
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+    // add to cart display
+    displayInCart()
+}
+
+//DISPLAY IN CART //
+function displayInCart() {
+
+    const cartContainer = document.querySelector("#display-cart-items")
+
+    // clear old cart HTML
+    cartContainer.innerHTML = ""
+
+    // loop through cart array
+    cart.forEach(item => {
+
+        cartContainer.innerHTML += `
+            <div class="cart-item">
+
+                <img src="${item.image}" width="100">
+
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>$${item.price}</p>
+                </div>
+
+                <!-- Quantity -->
+                <ul id="quantity-buttons">
+                    <li><button class="increase-quan">+</button></li>
+                    <li>0</li>
+                    <li><button class="decrease-quan">-</button></li>
+                </ul>
+
+                <!-- Trash -->
+                <button id="cart-trash">trash</button>
+
+            </div>
+        `
+    })
+}
+
+// ONCLICK FOR PRODUCT DESCRIPTION // 
+// Add to cart button //
+
 
 
 // NORMAL - RENDER PRODUCT GRID //

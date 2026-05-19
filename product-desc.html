@@ -82,9 +82,9 @@
             <!-- Quantity -->
             <p>Quantity</p>
             <ul id="quantity-buttons">
-                <li><button id="increase-quan">+</button></li>
+                <li><button class="increase-quan">+</button></li>
                 <li>0</li>
-                <li><button id="decrease-quan">-</button></li>
+                <li><button class="decrease-quan">-</button></li>
             </ul>
 
             <button id="add-to-cart">Add To Cart</button>
@@ -94,6 +94,7 @@
         </section>
 
 
+        <!-- Cart Overlay -->
         <section id="cart-overlay">
             <!-- Close Overlay Button -->
             <button id="cart-close-btn">
@@ -106,47 +107,9 @@
             </div>
 
             <!-- Item -->
-            <table id="display-cart-items">
+            <section id="display-cart-items">
 
-                <!-- TABLE HEADER - Divider -->
-                <th colspan="2">
-                    <hr>
-                </th>
-
-                <!-- COL 1 (MERGE 4 ROWS) - Image -->
-                <tr rowspan="4">
-                        <img id="cart-img" src="" alt="">
-                </tr>
-
-                
-                <tr>
-                    <!-- COL 2, ROW 1 - Name -->
-                    <td>
-                        <h3 id="cart-name"></h3>
-                    </td>
-
-                    <!-- COL 2, ROW 2 - Price -->
-                    <td>
-                        <h4 id="cart-price"></h4>
-                    </td>
-
-                    <!-- COL 2, ROW 3 - Quantity -->
-                    <td>
-                        <ul id="quantity-buttons">
-                            <li><button id="increase-quan">+</button></li>
-                            <li>0</li>
-                            <li><button id="decrease-quan">-</button></li>
-                        </ul>
-                    </td>
-
-                    <!-- COL 2, ROW 4 - Trash -->
-                    <td>
-                        <button id="cart-trash">trash</button>
-                    </td>
-                </tr>
-
-
-            </table>
+            </section>
 
             <!-- Order Summary -->
             <table>
@@ -191,5 +154,6 @@
     </footer>
 
     <script src="product-desc.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

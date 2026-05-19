@@ -120,46 +120,6 @@ function showDetails() {
     document.getElementById("product-price").textContent = "$" + product.price
 }
 
-// EMPTY ARRAY OF OBJECTS FOR ITEMS IN CART //
-let cart = []
-
-
-function addToCart() {
-    // find table tag in overlay
-    let table = document.querySelector('#display-cart-items')
-
-    // create empty row spanning 2 columns
-    let newTr = document.createElement('tr')
-    newTr.colSpan = 2
-    table.appendChild(newTr)
-
-    let newTh = document.createElement('th')
-    newTr.appendChild(newTh)
-
-    // add hr to header
-    let newHr = document.createElement('hr')
-    newTh.appendChild(newHr)
-
-    //
-    function addEl(parent, child, span, content) {
-
-        // create empty row spanning __ columns
-        let newParent = document.createElement(parent)
-        newParent.colSpan = span
-        table.appendChild(newParent)
-
-        let newChild = document.createElement(child)
-        newParent.appendChild(newChild)
-
-        // add hr to header
-        let newContent = document.createElement(content)
-        newChild.appendChild(newContent)
-
-    }
-
-
-}
-
 
 
 /* element can be TR or TD
