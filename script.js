@@ -208,13 +208,13 @@ function displayInCart() {
 
                 <!-- Quantity -->
                 <ul id="quantity-buttons">
-                    <li><button class="increase-quan">+</button></li>
-                    <li>0</li>
-                    <li><button class="decrease-quan">-</button></li>
+                    <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
+                    <li>${item.quantity}</li>
+                    <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
                 </ul>
 
                 <!-- Trash -->
-                <button id="cart-trash">trash</button>
+                <button class="cart-trash" onclick="removeItem(${item.id})">trash</button>
 
             </div>
         `
