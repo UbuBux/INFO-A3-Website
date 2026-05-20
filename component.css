@@ -54,7 +54,7 @@ nav {
 }
 
 .right-icons img {
-    max-width: 20px;
+    max-width: 30px;
 }
 
 /* HERO IMG */
@@ -112,9 +112,11 @@ header {
 
 /* DIVIDERS */
 .long-divider {
-    max-width: 60%;
-    margin-right: 20%;
-    margin-left: 20%;
+    background-color: white;
+    max-width: 100%;
+    padding: 1%;
+    box-sizing: border-box;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
 }
 
 /* MARQUEES */
@@ -139,56 +141,164 @@ marquee p {
     animation: scroll 10s linear infinite;
 }
 
+/* BENEATH HERO IMG */
+#beneath-hero {
+    background-image: linear-gradient(to bottom, white, rgb(209, 223, 210));
+    margin: 0;
+    padding: 2% 0;
+}
+
 /* PREVIEW SHOP */
 .preview-shop {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     justify-content: center;
     gap: 5rem;
     padding: 2% 10%;
 }
 
-/* cards */
-.product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* desktop */
+@media (max-width: 1100px) {
+    .preview-shop {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+/* mobiel */
+@media (max-width: 500px) {
+    .preview-shop {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARDS */
 /* product card img (to put button on top) */
-.product-card-img-1 {
-    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), 
-    transparent), url(kk-website-images/standard-small.png);
-    background-size: contain;
+.product-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
 
     width: 100%;
     max-width: 380px;
     aspect-ratio: 380 / 350;
 
-    padding: 5%;
+    padding: 7%;
     border-radius: 5px;
+    border: 5px solid;
+    box-sizing: border-box;
 
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    transition: 0.3s;
 }
 
-.product-card a {
+.product-card-img:hover {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.6));
+}
+
+
+
+/* INDIVIDUAL CARDS */ 
+#product-card-img-1 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), 
+    transparent), url(kk-website-images/klassic-SML.png);
+}
+
+#product-card-img-2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), 
+    transparent), url(kk-website-images/standard-small.png);
+}
+
+#product-card-img-3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), 
+    transparent), url(kk-website-images/standard-medium-front.png);
+}
+
+#product-card-img-4 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), 
+    transparent), url(kk-website-images/standard-large-front.png);
+}
+
+
+/*BUTTON ON INDIVIDUAL CARDS */
+.product-card-img a {
     background-color: white;
     height: fit-content;
     color: black;
-    padding: 2% 3%;
+    padding: 3% 6%;
     border-radius: 30px;
     text-decoration: none;
+    transition: 0.2s;
 }
 
-.product-card article h3, .product-card article h4 {
-    display: flex;
-    flex-direction: column;
+.product-card-img a:hover {
+    animation: arrow-wiggle 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes arrow-wiggle {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(5px);
+    }
+}
+
+/* TEXT IN THE CARDS */
+.product-card-img article h3 {
+    font-size: 1rem;
     text-align: left;
     margin: 0;
     height: fit-content;
 }
+
+.product-card-img article h4 {
+    font-size: 0.8rem;
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+    height: fit-content;
+}
+
+
+/* UNIQUE SELLING POINTS */
+.usps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    margin: 5% 20%;
+
+}
+
+.usp-info img {
+    border: solid white 20px;
+    background-color: white;
+    border-radius: 100px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    width: 60px;
+    height: 60px;
+}
+
+.usp-info {
+    background-color: white;
+    text-align: center;
+
+    border-radius: 5px;
+
+    position: relative;
+    padding: 2% 4% 2% 2rem;
+}
+
 
 
 /* CART OVERLAY */
