@@ -27,6 +27,8 @@ nav {
 
 #hamburgerIcon {
     display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 /* LINKS (CENTER) */
@@ -96,6 +98,54 @@ nav {
     #nav-profile {
         display: none;
     }
+}
+
+/* OVERLAY (grey bg behind overlay) */
+#navOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 998;
+}
+
+/* MOBILE OVERLAY */
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: black;
+
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+}
+
+#mobileMenu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* DIFFERENT STATES FOR OVERLAY */
+/* when hamburger is clicked */
+#mobileMenu.active {
+    transform: translateX(0);
+}
+
+
+#navOverlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* HAMB ANIMATION */
+#hamburgerIcon.open {
+    transform: rotate(90deg);
 }
 
 /* HERO IMG */

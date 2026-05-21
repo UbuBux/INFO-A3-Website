@@ -107,7 +107,7 @@ function showDetails() {
 
     const params = new URLSearchParams(window.location.search)
 
-    const productId = params.get("id")
+    const productId = Number(params.get("id"))
 
     const product = products[productId]
 
@@ -218,18 +218,3 @@ function removeItem(id) {
     cart = cart.filter(p => p.id !== id)
     saveCart()
 }
-
-
-/* element can be TR or TD
-function addRow(element, content, parent, span) {
-    // find table tag in overlay
-    let table = document.querySelector('#display-cart-items')
-
-    // create new table element, add content and append to parent
-    let newEl = document.createElement(element)
-    newEl.textContent = content
-    parent.
-
-}
-
-*/

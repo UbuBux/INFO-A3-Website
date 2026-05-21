@@ -1,6 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    showProducts()
+    if (typeof showProducts === "function") {
+        showProducts()
+    }
+
+
+    // HAMB MOBILE OVERLAY //
+    const hamburger = document.getElementById("hamburgerIcon")
+    const menu = document.getElementById("mobileMenu")
+    const overlay = document.getElementById("navOverlay")
+
+    console.log("hamburger:", hamburger)
+    console.log("menu:", menu)
+    console.log("overlay:", overlay)
+
+    function toggleMenu() {
+        menu.classList.toggle("active")
+        overlay.classList.toggle("active")
+        hamburger.classList.toggle("open")
+    }
+
+    hamburger.addEventListener("click", toggleMenu)
+    overlay.addEventListener("click", toggleMenu)
+
 
     // CART OVERLAY //
     // Create variables 1) open cart 2) show cart 3) close cart //
@@ -24,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 })
+
+
 
 // ARRAY OF PRODUCTS //
 
@@ -222,14 +246,14 @@ function displayInCart() {
 }
 
 // INCREASE AND DECREASE QUANTITY //
-function increaseQty(id) {
+function increaseQuan(id) {
     const item = cart.find(product => product.id === id)
     item.quantity += 1
 
     saveCart()
 }
 
-function decreaseQty(id) {
+function decreaseQuan(id) {
     const item = cart.find(product => product.id === id)
 
     item.quantity -= 1
