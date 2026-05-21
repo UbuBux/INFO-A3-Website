@@ -18,6 +18,7 @@ main {
     justify-content: center;
 }
 
+/* LEFT */
 aside {
     display: flex;
     flex-direction: column;
@@ -25,13 +26,36 @@ aside {
 
 }
 
-
-
+/* RIGHT */
 section {
     display: flex;
     flex-direction: column;
     gap: 2%;
+}
 
+section h2 {
+    text-align: left;
+    margin: 0;
+}
+
+section h3 {
+    text-align: left;
+    margin: 0;
+    font-weight: 400;
+}
+
+section h5 {
+    
+    text-align: left;
+    margin: 0;
+    align-content: center;
+}
+
+.paypal-img {
+    min-width: 2em;
+    max-width: 5em;
+    padding: 2%;
+    padding-bottom: 0;
 }
 
 /* QUANTITY BUTTONS */
@@ -58,7 +82,7 @@ section {
 
 /* ADD TO CART BUTTON */
 
-#add-to-cart {
+.add-to-cart {
     border: none;
     font-size: 2em;
     background-color: #415E39;
@@ -67,28 +91,4 @@ section {
     border-radius: 10px;
     color: white;
     font-size: medium;
-}
-
-
-
-
-/* CART OVERLAY */
-
-#cart-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    visibility: hidden;
-    width: 25vw;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 3%;
-    z-index: 1000;
-
-    overflow-y: auto;
-}
-
-#cart-overlay.open-cart {
-    visibility: visible;
 }
