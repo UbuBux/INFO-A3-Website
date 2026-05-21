@@ -20,7 +20,13 @@ nav {
 }
 
 .nav-logo img {
-    height: 60px; 
+    height: 3rem; 
+    width: auto;
+    max-width: none;
+}
+
+#hamburgerIcon {
+    display: none;
 }
 
 /* LINKS (CENTER) */
@@ -28,6 +34,10 @@ nav {
     display: flex;
     gap: 2rem;
     justify-content: center;
+}
+
+.mobile-nav-logo {
+    display: none;
 }
 
 .middle-links a {
@@ -57,7 +67,36 @@ nav {
     max-width: 30px;
 }
 
+@media (max-width: 700px) {
+    /* LEFT */
+    .nav-logo a {
+        display: none;
+    }
 
+    #hamburgerIcon {
+        display: block;
+        height: 2rem; 
+        width: auto;
+        max-width: none;
+    }
+    
+    /* MIDDLE */
+    .desktop-ml {
+        display: none;
+    }
+
+    .mobile-nav-logo {
+        display: block;
+        max-height: 80%; 
+        width: 40%;
+        max-width: none;
+    }
+
+    /* RIGHT */
+    #nav-profile {
+        display: none;
+    }
+}
 
 /* HERO IMG */
 .hero-img {
@@ -112,6 +151,7 @@ nav {
     color: white;
     padding: 8%;
     border-radius: 20px;
+    font-size: 1em;
 }
 
 #jumpShop {
@@ -203,10 +243,14 @@ marquee p {
 }
 
 /* mobiel */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .preview-shop {
         grid-template-columns: 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
     }
+
+    
 }
 
 /* CARDS */
@@ -388,6 +432,14 @@ marquee p {
 #cart-overlay.open-cart {
     visibility: visible;
 }
+
+@media (max-width: 700px) {
+    #cart-overlay {
+        visibility: hidden;
+        background-color: none;
+    }
+}
+
 
 
 /* FOOTER */
