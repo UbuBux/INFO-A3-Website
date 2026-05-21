@@ -337,27 +337,6 @@ marquee p {
 
 
 
-
-
-
-
-/* PRODUCT GRID INFORMATION */
-#page-info {
-    text-align: center;
-}
-
-
-
-/* SEARCH BAR */
-.search-bar {
-    margin: 2%;
-    min-width: 40vw;
-    padding: 0.5%;
-    font-family: "Montserrat", sans-serif;
-}
-
-
-
 /* CART OVERLAY */
 #quantity-buttons {
     list-style-type: none;

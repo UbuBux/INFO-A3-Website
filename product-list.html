@@ -57,19 +57,63 @@
         <!-- Hero Image -->
         <div class="hero-img" id="hero-img-shop-list">
             <div class="hero-content">
-                <a href="#page-info" id="jumpShop" class="cta-btn">v</a>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Product Grid -->
-        <article id="page-info">
+        <aside id="page-info">
+            <!-- Search Bar -->
             <input class="search-bar" id="searchBar" type="text" placeholder="Search">
 
-        </article>
+            <!-- Sort By categories -->
+            <select name="sort-by" id="sortBy">
+                <option value="newest">Newest</option>
+                <option value="lowest">Price (low to high)</option>
+                <option value="highest">Price (high to low)</option>
+            </select>
+
+            <!-- Filter categories -->
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="standard" id="standardKennels"> 
+                <label for="standard">Standard</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="klassic" id="klassicKennels"> 
+                <label for="klassic">Klassic</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="cottage" id="cottageKennels"> 
+                <label for="cottage">Cottage</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="cottage" id="cottageKennels"> 
+                <label for="cottage">Cottage</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="bungalow" id="bungalowKennels"> 
+                <label for="bungalow">Bungalow</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="deluxe" id="deluxeKennels"> 
+                <label for="deluxe">Deluxe</label>
+            </div>
+
+            <div class="shopCheckboxes">
+                <input type="checkbox" name="double" id="doubleKennels"> 
+                <label for="double">Double</label>
+            </div>
+        </aside>
+
+        
         <section id="shop-grid">
-            
+
         </section>
 
         <!-- Cart Overlay -->
