@@ -490,10 +490,6 @@ marquee p {
 }
 
 /* Cart beside */
-.cart-beside {
-    
-}
-
 .cart-beside h3 {
     font-size: 1em;
     text-align: left;
@@ -542,7 +538,9 @@ footer {
 
 /* FOOTER LOGO */
 footer img {
-    height: 60px; 
+    height: 3rem; 
+    width: auto;
+    max-width: none;
 }
 
 /* LINKS (CENTER) */
@@ -567,4 +565,17 @@ footer img {
 /* ACKNOWLEDGEMENT (right) */
 footer p {
     width: 20%;
+}
+
+@media (max-width: 700px) {
+    footer {
+        justify-content: center;
+        gap: 4.5rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    footer p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
 }
