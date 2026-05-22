@@ -116,9 +116,15 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
+    width: 13rem;
     height: 100vh;
     background: black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 6.5rem;
+    padding-left: 2rem;
 
     transform: translateX(-100%);
     transition: 0.3s ease;
@@ -476,7 +482,7 @@ marquee p {
     padding: 3%;
     z-index: 1000;
     overflow: auto;
-    transition: 0.5s;
+    transition: 0.3s ease;
 }
 
 #cart-overlay.open-cart {
@@ -485,8 +491,7 @@ marquee p {
 
 @media (max-width: 700px) {
     #cart-overlay {
-        visibility: hidden;
-        background-color: none;
+        width: 75vw;
     }
 }
 
