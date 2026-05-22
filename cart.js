@@ -67,21 +67,22 @@ function displayInCart() {
 
                 <img src="${item.image}" width="100">
 
-                <div>
-                    <h3>${item.name}</h3>
-                    <p>$${item.price}</p>
+                <div class="cart-beside">
+                    <div>
+                        <h3>${item.name}</h3>
+                        <h4>$${item.price}</h4>
+                    </div>
+
+                    <!-- Quantity -->
+                    <ul id="quantity-buttons">
+                        <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
+                        <li>${item.quantity}</li>
+                        <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
+                    </ul>
+
+                    <!-- Trash -->
+                    <button class="cart-trash" onclick="removeItem(${item.id})">trash</button>
                 </div>
-
-                <!-- Quantity -->
-                <ul id="quantity-buttons">
-                    <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
-                    <li>${item.quantity}</li>
-                    <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
-                </ul>
-
-                <!-- Trash -->
-                <button class="cart-trash" onclick="removeItem(${item.id})">trash</button>
-
             </div>
         `
     })
