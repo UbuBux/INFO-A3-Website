@@ -20,6 +20,12 @@ h1 {
     text-align: center;
 }
 
+/* to complement H1 */
+h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
 /* product names - cards/prod desc pages */
 h3 {
     text-align: center;

@@ -16,4 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.addEventListener("click", toggleMenu)
     }
 
+    const shopBtn = document.getElementById("seeShop")
+
+    if (shopBtn) {
+        shopBtn.addEventListener("click", () => {
+            window.location.href = "product-list.html"
+        })
+    }
+
 })
