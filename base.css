@@ -17,12 +17,12 @@ img {
 
 /* titles/headings of pages - used sparingly */
 h1 {
-    text-align: center;
+    font-size: 2em;
 }
 
 /* to complement H1 */
 h2 {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
