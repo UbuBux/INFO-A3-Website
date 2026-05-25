@@ -54,3 +54,18 @@ button {
 
 /* LINKS */
 
+
+/* BUTTONS */
+button {
+    border: none;
+    padding: 3%;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+

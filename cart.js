@@ -6,10 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = document.querySelector('#cart-overlay')
     const cartClose = document.querySelector('#cart-close-btn')
 
-    console.log(cartIcon)
-    console.log(cart)
-    console.log(cartClose)
-
     // When cart icon is clicked, add class "open" to the overlay - this will make it visible
     cartIcon.addEventListener("click", (event) => {
         event.preventDefault()
@@ -81,7 +77,7 @@ function displayInCart() {
                     </ul>
 
                     <!-- Trash -->
-                    <button class="cart-trash" onclick="removeItem(${item.id})">trash</button>
+                    <button class="cart-trash" onclick="removeItem(${item.id})"><img src="icons/trash-red.png" alt="Trash can icon"></button>
                 </div>
             </div>
         `
