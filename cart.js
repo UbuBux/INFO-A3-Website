@@ -17,6 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
         cart.classList.remove("open-cart")
     })
 
+    // Close when clicking the dim backdrop
+    cart.addEventListener("click", (e) => {
+        if (e.target === cart) cart.classList.remove("open-cart")
+    })
+ 
+    // Kick off the display on page load
+    displayInCart()
+
 })
 
 // ADD ITEM TO CART //
@@ -47,26 +55,43 @@ function addToCart(productId) {
     displayInCart()
 }
 
+// Shipping //
+const standardShippingCost           = 25      // standard   
+const freeShippingThreshold = 1000    // spend 1000 get free shippoing
+ 
+
 //DISPLAY IN CART //
 function displayInCart() {
 
     const cartContainer = document.querySelector("#display-cart-items")
+    const footerEl      = document.querySelector("#cart-footer")
+    const countEl       = document.querySelector("#cart-count")
 
-    // clear old cart HTML
-    cartContainer.innerHTML = ""
+    // empty cart
+    if (cart.length === 0) {
+        if (countEl) countEl.textContent = ""
+        cartContainer.innerHTML = `<div class="cart-empty">Your cart is empty.</div>`
+    if (footerEl) footerEl.innerHTML = ""
+    return
+  }
+
+    // Item count badge
+    const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0)
+    if (countEl) countEl.textContent = totalQty + " item" + (totalQty !== 1 ? "s" : "")
 
     // loop through cart array
+    cartContainer.innerHTML = ""
     cart.forEach(item => {
 
         cartContainer.innerHTML += `
             <div class="cart-item">
 
-                <img src="${item.image}" width="100">
+                <img src="${item.image}" alt="${item.name} width="72" height="72">
 
                 <div class="cart-beside">
                     <div>
                         <h3>${item.name}</h3>
-                        <h4>$${item.price}</h4>
+                        <h4>$${item.price.toFixed(2)}</h4>
                     </div>
 
                     <!-- Quantity -->
@@ -82,6 +107,39 @@ function displayInCart() {
             </div>
         `
     })
+
+    const subtotal  = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    const shipping  = subtotal >= freeShippingThreshold ? 0 : standardShippingCost
+    const total     = subtotal + shipping
+    const remaining = freeShippingThreshold - subtotal
+
+    if (footerEl) {
+    footerEl.className = "cart-footer"
+    footerEl.innerHTML = `
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span>$${subtotal.toFixed(2)}</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Shipping${shipping > 0 ? ` <span class="cart-summary-note">free over $${freeShippingThreshold}</span>` : ""}</span>
+        <span style="${shipping === 0 ? "color:#3b6d11;font-weight:600;" : ""}">
+          ${shipping === 0 ? "Free" : "$" + shipping.toFixed(2)}
+        </span>
+      </div>
+      ${remaining > 0
+        ? `<div class="cart-summary-row" style="font-size:12px;color:#ccc;">Add $${remaining.toFixed(2)} more for free shipping</div>`
+        : `<div class="cart-free-shipping">✓ You've unlocked free shipping!</div>`
+      }
+      <hr class="cart-summary-divider">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span>$${total.toFixed(2)}</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout">Proceed to checkout</a>
+      <a href="product-list.html"     class="btn-continue">Continue shopping</a>
+    `
+  }
+    
 }
 
 // SAVE CART INFO //

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="component.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+        <nav>
+
+            <!-- LEFT -->
+            <div class="nav-logo">
+                <a href=""><img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo"></a>
+
+                <img class="hamburger" id="hamburgerIcon" src="icons/hamburger-blk.png" alt="Hamburger icon">
+            </div>
+
+            <!-- MIDDLE -->
+            <div class="middle-links">
+                <a class="desktop-ml" href="index.html">Home</a>
+                <a class="desktop-ml" href="product-list.html">Shop</a>
+                <a class="desktop-ml" href="">About</a>
+                <a class="desktop-ml" href="">Contact</a>
+
+                <div class="mobile-nav-logo">
+                    <a href=""><img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo"></a>
+                </div>
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="right-icons">
+                <a id="nav-profile" href=""><img src="icons/user-profile-blk.png" alt="User Profile icon"></a>
+
+                <a id="nav-search" href=""><img src="icons/search-blk.png" alt="Search icon"></a>
+                <a id="nav-cart" href=""><img src="icons/cart-blk.png" alt="Shopping Cart icon"></a>
+            </div>
+        </nav>
+
+        <main id="cartPage">
+
+            <!-- LEFT SIDE -->
+            <aside class="cp-card" id="cpCart">
+                <h2>Cart</h2>
+                <div class="cart-item">
+
+                    <img src="kk-website-images/cottage-kennel.png" width="100">
+
+                    <div class="cart-beside">
+                        <div>
+                            <h3>Cottage Kennel</h3>
+                            <h4>$2499.00</h4>
+                        </div>
+
+                        <!-- Quantity -->
+                        <ul id="quantity-buttons">
+                            <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
+                            <li>1</li>
+                            <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
+                        </ul>
+
+                        <!-- Trash -->
+                        <button class="cart-trash" onclick="removeItem(${item.id})"><img src="icons/trash-red.png" alt="Trash can icon"></button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+
+                    <img src="kk-website-images/cottage-kennel.png" width="100">
+
+                    <div class="cart-beside">
+                        <div>
+                            <h3>Cottage Kennel</h3>
+                            <h4>$2499.00</h4>
+                        </div>
+
+                        <!-- Quantity -->
+                        <ul id="quantity-buttons">
+                            <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
+                            <li>1</li>
+                            <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
+                        </ul>
+
+                        <!-- Trash -->
+                        <button class="cart-trash" onclick="removeItem(${item.id})"><img src="icons/trash-red.png" alt="Trash can icon"></button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT SIDE -->
+            <section class="cp-card" id="cpOrderSummary">
+                <h2>Order Summary</h2>
+
+                <!-- Order Summary -->
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td id="subtotal-value">example</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total (with GST)</td>
+                        <td id="total-value">example</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shipping Total Calculated at Checkout</td>
+                    </tr>
+                </table>
+
+                <button href="product-list.html" id="seeShop" class="cta-btn">Browse Kennels</button>
+            </section>
+
+        </main>
+
+</body>
+</html>

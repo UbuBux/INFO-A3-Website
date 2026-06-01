@@ -546,7 +546,8 @@ marquee p {
     height: 60%;
     padding: 0 1rem 0 1rem;
 
-    border-radius: 5px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* Cart beside */
@@ -569,12 +570,34 @@ marquee p {
 }
 
 /* TRASH ICON */
+.cart-trash {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    opacity: 0.35;
+    transition: opacity 0.15s;
+    align-self: flex-end;
+}
+
+.cart-trash:hover { 
+    opacity: 1; 
+}
 
 .cart-trash img {
     height: 1rem;
     width: 1rem;
     padding: 1%;
 }
+
+/* ORDER SUMMARY */
+.cart-footer {
+    border-top: 1px solid #ebebeb;
+    padding: 1.25rem 1.5rem 1.5rem;
+    flex-shrink: 0;
+    background: #fff;
+  }
 
 /* QUANTITY BUTTONS */
 
@@ -584,11 +607,13 @@ marquee p {
     display: flex;
     gap: 1.5em;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    
+    padding: 2% 5%;
+    width: fit-content;
+    height: fit-content;
     justify-content: space-between;
 
-    border: black solid 1px;
+    border: #f5f5f5 solid 1px;
     border-radius: 10px;
 }
 
@@ -596,19 +621,93 @@ marquee p {
     border: none;
     font-size: 1.5em;
     padding: 20%;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: white;
     margin: 2%;
+
+    width: 2rem;
 }
 
 #quantity-buttons button:hover {
     background-color: #f5f5f5;
+    filter: none;
 }
 
 /*
 background-color: #f5f5f5;
 
 */
+
+/* CART PAGE */
+#cartPage {
+    display: flex;
+    background-color: white;
+    gap: 2%;
+    padding: 3%;
+}
+
+/* CART CARD STYLE */
+.cp-card {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 16px;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#cpCart h2,
+#cpOrderSummary h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* LEFT */
+#cpCart {
+    width: 65%;
+
+}
+
+
+
+#cpCart .cart-beside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* RIGHT */
+#cpOrderSummary {
+    width: 35%;
+    position: sticky;
+    top: 2rem;
+}
+
+#cpOrderSummary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+#cpOrderSummary tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#cpOrderSummary td {
+    padding: 1rem 0;
+}
+
+#cpOrderSummary td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+
 
 
 
