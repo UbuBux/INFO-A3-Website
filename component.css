@@ -103,11 +103,11 @@ nav {
     }
 }
 
-/* OVERLAY (grey bg behind overlay) */
+/* OVERLAY (white bg behind overlay) */
 #navOverlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(white, 0.5);
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
@@ -514,7 +514,12 @@ marquee p {
     padding: 3%;
     z-index: 1000;
     overflow: auto;
-    transition: 0.15s;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#cart-overlay.open-cart {
+    transform: translateX(0);
 }
 
 
@@ -529,7 +534,30 @@ marquee p {
     }
 }
 
+/* CART HEADER */
+.cart-overlay-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #ebebeb;
+    flex-shrink: 0;
+}
+ 
+.cart-overlay-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+
+
 /* CART ITEMS */
+#display-cart-items {
+    overflow-y: auto;
+}
+
+
 .cart-item {
     display: flex;
     flex-direction: row;
@@ -597,7 +625,77 @@ marquee p {
     padding: 1.25rem 1.5rem 1.5rem;
     flex-shrink: 0;
     background: #fff;
-  }
+}
+
+.cart-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #888;
+    padding: 3px 0;
+}
+ 
+.cart-summary-note {
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 5px;
+}
+ 
+.cart-free-shipping {
+    font-size: 12px;
+    color: #3b6d11;
+    padding: 3px 0;
+}
+ 
+.cart-summary-divider {
+    border: none;
+    border-top: 1px solid #ebebeb;
+    margin: 10px 0;
+}
+ 
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 0;
+}
+ 
+  /* Checkout button */
+.btn-checkout {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 14px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+.btn-checkout:hover { opacity: 0.85; }
+ 
+.btn-continue {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.15s;
+    text-align: center;
+}
+ 
+.btn-continue:hover { color: black; }
 
 /* QUANTITY BUTTONS */
 
@@ -718,47 +816,71 @@ background-color: #f5f5f5;
 /* FOOTER */
 footer {
     background-color: black;
-    color: white;
-    border-radius: 20px 20px 0 0;
+    color: gray;
+
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+
+    padding: 3rem 3rem 2rem;
     margin: 0;
-    gap: 3.5em;
+    gap: 1em;
     font-size: 11px;
-    height: 10rem;
+
+}
+
+footer a {
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+}
+
+/* FOOTER TOP (with branding) */
+.footer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 1rem;
 }
 
 /* FOOTER LOGO */
 footer img {
-    height: 3rem; 
+    height: 2.75rem; 
     width: auto;
     max-width: none;
+    display: block;
 }
 
-/* LINKS (CENTER) */
-.footer-flex-middle {
+/* footer links */
+.footer-links {
     display: flex;
-    flex-direction: row;
-    gap: 2em;
+    gap: 3.5rem;
 }
-
-.footer-middle-links {
+ 
+/* single nav column */
+.footer-links-col {
     display: flex;
-    gap: 0.5rem;
-    justify-content: center;
     flex-direction: column;
+    gap: 0.65rem;
 }
 
-.footer-middle-links a {
-    color: white;
-    text-decoration: none;
+footer hr {
+    width: 100%;
+    border: solid rgb(69, 69, 69) 0.5px;
 }
 
-/* ACKNOWLEDGEMENT (right) */
-footer p {
-    width: 20%;
+/* FOOTER BOTTOM (ACKNOWLEDGEMENT) */
+.footer-bottom {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.footer-acknowledgement {
+    max-width: 50vw;
+    color: gray;
 }
 
 @media (max-width: 700px) {
