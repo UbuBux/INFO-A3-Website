@@ -843,8 +843,12 @@ background-color: #f5f5f5;
 
 #cpOrderSummary td:last-child {
     text-align: right;
+}
+
+#total-row-cart-page td {
     font-weight: 600;
 }
+
 
 /* CART PAGE EMPTY STATE */
 .cp-empty {
