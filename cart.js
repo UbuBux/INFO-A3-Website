@@ -53,6 +53,7 @@ function addToCart(productId) {
 
     // add to cart display
     displayInCart()
+
 }
 
 // Shipping //
@@ -86,7 +87,7 @@ function displayInCart() {
         cartContainer.innerHTML += `
             <div class="cart-item">
 
-                <img src="${item.image}" alt="${item.name} width="72" height="72">
+                <img src="${item.image}" alt="${item.name}" width="72" height="72">
 
                 <div class="cart-beside">
                     <div>
@@ -135,7 +136,7 @@ function displayInCart() {
         <span>Total</span>
         <span>$${total.toFixed(2)}</span>
       </div>
-      <a href="checkout.html" class="btn-checkout">Proceed to checkout</a>
+      <a href="cart.html" class="btn-checkout">Confirm order</a>
       <a href="product-list.html"     class="btn-continue">Continue shopping</a>
     `
   }
@@ -146,6 +147,7 @@ function displayInCart() {
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart))
     displayInCart()
+    if (typeof displayCartPage === "function") displayCartPage()
 }
 
 // INCREASE AND DECREASE QUANTITY //
