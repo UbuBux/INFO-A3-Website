@@ -43,8 +43,142 @@
             </div>
         </nav>
 
-        <main>
-            
+        <main id="cartPage">
+
+            <!-- LEFT SIDE -->
+            <section class="cp-card" id="checkoutForm">
+                <h2>Payment</h2>
+
+                <form action="">
+
+                <!-- Personal Information -->
+                <div class="cf-card">
+                    <h3 class="cf-section-title">Personal information</h3>
+
+                    <div class="cf-row cols-2">
+                        <div class="cf-field">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" placeholder="Jane" autocomplete="given-name">
+                        </div>
+
+                        <div class="cf-field">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" placeholder="Smith" autocomplete="family-name">
+                        </div>
+                    </div>
+
+                    <div class="cf-row cols-2">
+                        <div class="cf-field">
+                        <label for="mobile">Mobile number</label>
+                        <input type="tel" id="mobile" placeholder="04xx xxx xxx" autocomplete="tel">
+                        </div>
+
+                        <div class="cf-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="jane@example.com" autocomplete="email">
+                        </div>
+                </div>
+
+                <br>
+
+                <!-- Shipping Information -->
+                <div class="cf-card">
+                    <h3 class="cf-section-title">Shipping information</h3>
+                    <div class="cf-row">
+                        <div class="cf-field">
+                        <label for="address">Delivery address</label>
+                        <input type="text" id="address" placeholder="123 Wattle Drive" autocomplete="street-address">
+                        </div>
+                    </div>
+
+                    <div class="cf-row cols-3">
+                        <div class="cf-field">
+                        <label for="suburb">Suburb</label>
+                        <input type="text" id="suburb" placeholder="Fitzroy" autocomplete="address-level2">
+                        </div>
+
+                        <div class="cf-field">
+                            <label for="state">State</label>
+                            <select id="state" autocomplete="address-level1">
+                                <option value="" disabled selected>Select</option>
+                                <option>VIC</option>
+                                <option>NSW</option>
+                                <option>QLD</option>
+                                <option>SA</option>
+                                <option>WA</option>
+                                <option>TAS</option>
+                                <option>ACT</option>
+                                <option>NT</option>
+                            </select>
+                        </div>
+
+                        <div class="cf-field">
+                        <label for="postcode">Postcode</label>
+                        <input type="text" id="postcode" placeholder="3065" maxlength="4" autocomplete="postal-code">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Banking Information -->
+                <div class="form-section">
+                    <div class="cf-card">
+                        <h3 class="cf-section-title">Banking information</h3>
+                        <div class="cf-card-badges">
+                            <span class="cf-badge visa">VISA</span>
+                            <span class="cf-badge mc">Mastercard</span>
+                            <span class="cf-badge amex">AMEX</span>
+                        </div>
+
+                        <div class="cf-row">
+                            <div class="cf-field">
+                            <label for="card-number">Card number</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number">
+                            </div>
+                        </div>
+
+                        <div class="cf-row cf-card-row">
+                            <div class="cf-field">
+                            <label for="card-name">Name on card</label>
+                            <input type="text" id="card-name" placeholder="Jane Smith" autocomplete="cc-name">
+                            </div>
+
+                            <div class="cf-field">
+                            <label for="expiry">Expiry</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp">
+                            </div>
+
+                            <div class="cf-field">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="•••" maxlength="4" autocomplete="cc-csc">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="cf-btn">Place order</button>
+                <p class="cf-secure">&#128274 Secured with 256-bit SSL encryption</p>
+
+            </form>
+            </section>
+
+            <!-- RIGHT SIDE -->
+            <aside class="cp-card" id="cpCart">
+                <h2>Cart</h2>
+
+                <div id="cp-cart-items">
+                <!-- Items rendered by displayCartPage() -->
+                </div>
+
+                <div id="cp-empty-state" class="cp-empty" style="display:none;">
+                    <p>Your cart is empty.</p>
+                    <a href="product-list.html" class="cta-btn">Browse Kennels</a>
+                </div>
+
+                <a href="product-list.html" class="btn-continue">Back to shop</a>
+            </aside>
+
+        </main>
         
         <footer>
             <!-- Logo and links in Footer (top) -->
@@ -83,7 +217,11 @@
             </div> 
 
         </footer>
-    </main>
+    
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+    <script src="nav.js"></script>
+    <script src="cart-page.js"></script>
     
 </body>
 </html>

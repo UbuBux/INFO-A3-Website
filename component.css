@@ -157,6 +157,8 @@ nav {
     transform: rotate(90deg);
 }
 
+/*------ HERO IMAGES ------------------------------------------------------*/
+
 /* HERO IMG */
 .hero-img {
     background-size: cover;
@@ -286,6 +288,7 @@ header {
     }
 }
 
+/*------ BODY FOR HOME PAGE ------------------------------------------------------*/
 
 /* DIVIDERS */
 .long-divider {
@@ -489,6 +492,7 @@ marquee p {
 }
 
 
+/*------ CART OVERLAY ------------------------------------------------------*/
 
 /* CART OVERLAY */
 #add-to-cart {
@@ -736,6 +740,8 @@ background-color: #f5f5f5;
 
 */
 
+/*------ CART PAGE ------------------------------------------------------*/
+
 /* CART PAGE */
 #cartPage {
     display: flex;
@@ -766,8 +772,38 @@ background-color: #f5f5f5;
 }
 
 /* LEFT */
+#cpOrderSummary {
+    width: 60%;
+    position: sticky;
+    top: 2rem;
+}
+
+#cpOrderSummary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+#cpOrderSummary tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#cpOrderSummary td {
+    padding: 1rem 0;
+}
+
+#cpOrderSummary td:last-child {
+    text-align: right;
+}
+
+#total-row-cart-page td {
+    font-weight: 600;
+}
+
+
+/* RIGHT */
 #cpCart {
-    width: 65%;
+    width: 40%;
     align-items: flex-start;   
     justify-content: flex-start;
 
@@ -817,39 +853,6 @@ background-color: #f5f5f5;
 }
 
 
-
-
-
-/* RIGHT */
-#cpOrderSummary {
-    width: 35%;
-    position: sticky;
-    top: 2rem;
-}
-
-#cpOrderSummary table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-}
-
-#cpOrderSummary tr {
-    border-bottom: 1px solid #ddd;
-}
-
-#cpOrderSummary td {
-    padding: 1rem 0;
-}
-
-#cpOrderSummary td:last-child {
-    text-align: right;
-}
-
-#total-row-cart-page td {
-    font-weight: 600;
-}
-
-
 /* CART PAGE EMPTY STATE */
 .cp-empty {
     width: 100%;
@@ -863,6 +866,136 @@ background-color: #f5f5f5;
     gap: 1rem;
 }
 
+/*------ CHECKOUT PAGE ------------------------------------------------------*/
+#checkoutForm {
+    width: 60%;
+    background-color: white;
+}
+
+.form-section {
+    padding-bottom: 5%;
+}
+
+.form-section h3 {
+    font-size: 1em;
+    text-align: left;
+}
+
+.cf-card {
+    background: #f5f5f5;
+    border: 1px solid #e0ddd6;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+ 
+.cf-section-title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: black;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* GRID ROWS */
+.cf-row {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 10px;
+}
+
+.cf-row.cols-2 { 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.cf-row.cols-3 { 
+    grid-template-columns: 2fr 1fr 1fr; 
+}
+    
+/* name / expiry / cvv */
+.cf-card-row { 
+    grid-template-columns: 1fr 80px 100px; 
+} 
+
+/* INDIVIDUAL FIELDS (to wrap) */
+  .cf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* LABELS */
+.cf-field label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+ 
+/* Inputs & selects */
+.cf-field input,
+.cf-field select {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding: 0.8em 1em;
+    box-sizing: border-box;
+
+    border: 1px solid #c9c3b8;
+    border-radius: 8px;
+    color: #3b2f1e;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    width: 100%;
+}
+
+.cf-field input:focus, .cf-field select:focus {
+    border-color: #415E39;                         /* purple focus — cool/modern */
+    box-shadow: 0 0 0 3px rgba(83, 74, 183, .15);
+}
+ 
+.cf-field input::placeholder {
+    color: gray;
+    font-size: 13px;
+}
+
+/* PLACE ORDER BUTTON */
+.cf-btn {
+    width: 100%;
+    padding: 13px;
+    background: #415E39;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    transition: background .15s, transform .1s;
+}
+.cf-btn:hover { 
+    background: #415E39; 
+}
+
+.cf-btn:active { 
+    transform: scale(.99); 
+}
+
+.cf-secure {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/*------ FOOTER ------------------------------------------------------*/
 
 /* FOOTER */
 footer {
