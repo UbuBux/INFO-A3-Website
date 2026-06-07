@@ -197,20 +197,21 @@ nav {
 
 
 #hero-img-shop-list {
-    background-image: url('kk-website-images/shop-hero-img.png');
+    background-image: url('kk-website-images/shop-page-hero.png');
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
+    justify-content: flex-end;
+    background-position: 30% center;
+    text-align: right;
     height: 50vh;
-    border-bottom: white solid 10px;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
 }
 
-#hero-img-shop-list {
-    text-align: center;
-    position: relative;
+#hero-img-shop-list .hero-content {
+    align-content: center;
+    padding-left: 35rem;
+    max-width: 45%;
 }
+
 
 /* BUTTON ON HERO-IMG - Browse Shop */
 
@@ -289,6 +290,12 @@ header {
         padding: 6%;
         border-radius: 20px;
         font-size: 0.9em;
+    }
+
+    #hero-img-shop-list .hero-content {
+        align-content: center;
+        padding-left: 35rem;
+        max-width: 35%;
     }
 }
 
@@ -587,6 +594,11 @@ header {
 .feature-card:hover .decorative {
     opacity: 1;
     transform: translateY(0);
+}
+
+.feature-card:hover {
+    background-color: white;
+    transition: transform 0.3s ease;
 }
 
 /* mobiel */
