@@ -28,3 +28,30 @@ function showDetails() {
     let button = document.getElementById('addToCartBtn')
     button.onclick = () => addToCart(productId)
 }
+
+document.querySelectorAll(".acc-trigger").forEach(button => {
+    button.addEventListener("click", () => {
+        toggleAccordion(button);
+    });
+});
+
+function toggleAccordion(button) {
+    const currentItem = button.parentElement;
+
+    document.querySelectorAll(".acc-item").forEach(item => {
+        if (item !== currentItem) {
+            item.classList.remove("active");
+            item.querySelector(".acc-body").style.maxHeight = null;
+        }
+    });
+
+    currentItem.classList.toggle("active");
+
+    const body = currentItem.querySelector(".acc-body");
+
+    if (currentItem.classList.contains("active")) {
+        body.style.maxHeight = body.scrollHeight + "px";
+    } else {
+        body.style.maxHeight = null;
+    }
+}

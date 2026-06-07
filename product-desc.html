@@ -57,17 +57,28 @@
         </div>  
 
         <!-- Marquee Banner -->
-        <marquee width="100%" direction="right" height="100px">
-            <div>  
-                <p>Customisable</p>
-                <p>Australian Made</p>
-                <p>Durable</p>
-                <p>Stylish</p>
-            </div>  
-        </marquee>
-        
-        
+        <div class="marquee-banner">
+            <div class="marquee-track">  
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
 
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
+            </div>  
+        </div>
+        
     </header>  
     <br>
     <main id="product-desc">
@@ -86,7 +97,87 @@
 
             <!-- Carousel of Images -->
             <img id="pro-img-1" src="" alt="">
+
+            <!-- Accordion with Product details -->
+            <div class="accordion">
+
+                <!-- DIMENSIONS -->
+                <div class="acc-item">
+                    <button class="acc-trigger">
+                        <span class="acc-title">Dimensions</span>
+                        <img src="icons/paw-design.png" class="acc-chevron">
+                    </button>
+
+                    <div class="acc-body">
+                        <div class="acc-inner">
+                            <p>Your product description here...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MATERIALS -->
+                <div class="acc-item">
+                    <button class="acc-trigger">
+                        <span class="acc-title">Materials</span>
+                        <img src="icons/paw-design.png" class="acc-chevron">
+                    </button>
+
+                    <div class="acc-body">
+                        <div class="acc-inner">
+                            <ul>
+                                <li>Insulated walls/roof (aircell foam)</li>
+                                <li>12mm painted plyboard base</li>
+                                <li>Hardwood plybraced walls</li>
+                                <li>Rolled steel frame UNCHEWABLE</li>
+                                <li>Colorbond sheets and flashings</li>
+                                <li>300mm front overhang for weather protection</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHIPPING AND DELIVERY -->
+                <div class="acc-item">
+                    <button class="acc-trigger">
+                        <span class="acc-title">Shipping and Delivery</span>
+                        <img src="icons/paw-design.png" class="acc-chevron">
+                    </button>
+
+                    <div class="acc-body">
+                        <div class="acc-inner">
+                            <p>Kennels are bulky items and leave our workshop fully assembled. 
+                                Free pick-up is from Pakenham, VIC. 
+                                Australia wide frieght and delivery is calculated at check out.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RETURNS & REFUNDS -->
+                <div class="acc-item">
+                    <button class="acc-trigger">
+                        <span class="acc-title">Returns and Refunds</span>
+                        <img src="icons/paw-design.png" class="acc-chevron">
+                    </button>
+
+                    <div class="acc-body">
+                        <div class="acc-inner">
+                            <p>Here at Kustom Dog Kennels we take great pride in ensuring both customer and user satisfaction. 
+                                However, due to the large size and uniqueness of each creation we cannot accept refunds due to change of heart, 
+                                incorrect size or specifications. 
+                                PLEASE double check your measurements and go over your order in the shopping cart before purchasing and if there is any uncertainty we are always here to assist.
+                            </p>
+                        </div>
+                    </div>
+                </div>    
+                
+            </div>
+                
+
         </aside>
+
+        
+
 
         <!-- Images and Details on the RIGHT -->
 
@@ -96,11 +187,13 @@
 
             <h3 id="product-price"></h3>
 
-            <h5>Pay in 4 interest-free payments of <br>
-                $399.75 with  <img class="paypal-img" src="icons/paypal.png" alt="PayPal Logo"></h5>
+            <h5>Pay in 4 interest-free payments<br>
+            with  <img class="paypal-img" src="icons/paypal.png" alt="PayPal Logo"></h5>
 
             <!-- Divider -->
             <img src="icons/small-divider.png" alt="Page divider">
+
+
 
             <!-- Buttons -->
             <!-- Quantity -->
