@@ -18,6 +18,7 @@ img {
 /* titles/headings of pages - used sparingly */
 h1 {
     font-size: 2em;
+    text-align: center;
 }
 
 /* to complement H1 */

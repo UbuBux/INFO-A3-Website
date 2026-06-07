@@ -68,21 +68,80 @@
     </header>  
     <main>
          <!-- Marquee Banner -->
-        <marquee width="100%" direction="right" height="100px">
-            <div>  
-                <p>Customisable</p>
-                <p>Australian Made</p>
-                <p>Durable</p>
-                <p>Stylish</p>
+        <div class="marquee-banner">
+            <div class="marquee-track">  
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
 
-                <p>Customisable</p>
-                <p>Australian Made</p>
-                <p>Durable</p>
-                <p>Stylish</p>
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
+                <span>Customisable</span>
+                <span>Australian Made</span>
+                <span>Durable</span>
+                <span>Stylish</span>
             </div>  
-        </marquee>
+        </div>
 
-    <section id="beneath-hero"> 
+    <h1 id="why-kk-heading">Why Kustom Kennels?</h1>
+    <br>
+
+    <!-- Features and Unique selling points -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-content" id="feature-chew-resistant">
+                <h3>Chew Resistant</h3>
+                <p>We know how excited your furry friends can get! That is why our kennels are chew resistant.</p>
+            </div>
+
+            <div class="feature-img">
+                <img src="kk-website-images/jumping-dog.png" alt="Dog jumping excitedly." id="jumping-dog">
+                <img src="icons/lightning-decor.svg" alt="Decorative lightning image" class="decorative" id="lightning-img">
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-content" id="feature-customisable">
+                <h3>Customisable</h3>
+                <p>We want any dog to be able to enjoy our kennels which is why you can make kustom requests!
+                    <br><br>
+                    <a href="product-list.html">Shop</a> our wide range of kennels today!
+                </p>
+            </div>
+
+            <div class="feature-img">
+                <img src="kk-website-images/house-halftone.png" alt="Kustom Kennel Klassic kennel." id="halftone-house">
+                <img src="icons/checkmark-decor.svg" alt="Checkmark image" class="decorative" id="checkmark-img">
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-content" id="feature-comfortable">
+                <h3>Comfortable</h3>
+                <p>At the end of the day, it is your furry friends who will be using the kennels. We ensure that our kennels are comfortable for them to hangout in!</p>
+            </div>
+
+            <div class="feature-img">
+                <img src="kk-website-images/sleeping-dog.png" alt="Dog sleeping comfortably" id="sleeping-dog">
+                <img src="icons/zzz-decor.svg" alt="Zzzs from snoring dog" class="decorative" id="zzzs-img">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Divider -->
+    <img class="long-divider" src="icons/divider.png" alt="Divider with a paw icon">
+
+        
+
+    <section id="preview"> 
         <h5>"It is of great quality and the service we received was fantastic!"</h5>
 
         <h1>Our most popular models</h1>
@@ -125,80 +184,37 @@
 
     </section>   
 
+    <!-- Cart Overlay -->
+    <section id="cart-overlay">
+        <!-- Close Overlay Button -->
+        <button id="cart-close-btn">
+            close
+        </button>
 
-        <!-- Divider -->
-        <img class="long-divider" src="icons/divider.png" alt="Divider with a paw icon">
+        <!-- Cart icon with number -->
+        <div class="cart-indicator">
 
+        </div>
 
-        <section class="usps">
-            <div class="usp-info">
-                <img class="usp-icon" id="usp1" src="icons/paw-design.png" alt="">
-
-                <h3>
-                    Chew Resistant
-                </h3>
-
-                <h4>
-                    We know how excited you furry friends can get! That is why our kennels are chew resistant.
-                </h4>
-            </div>
-
-            <div class="usp-info">
-                <img class="usp-icon" id="usp1" src="icons/paw-design.png" alt="">
-
-                <h3>
-                    Customisable
-                </h3>
-
-                <h4>
-                    We want any dog to be able to enjoy our kennels which is why you can make kustom requests!
-                </h4>
-            </div>
-
-            <div class="usp-info">
-                <img class="usp-icon" id="usp3" src="icons/paw-design.png" alt="">
-
-                <h3>
-                    Comfortable
-                </h3>
-
-                <h4>
-                    At the end of the day, it is your furry friends who will be using the kennels. We ensure that our kennels are comfortable for them to hangout in!
-                </h4>
-            </div>
-        </section>
-
-        <!-- Cart Overlay -->
-        <section id="cart-overlay">
-            <!-- Close Overlay Button -->
-            <button id="cart-close-btn">
-                close
-            </button>
-
-            <!-- Cart icon with number -->
-            <div class="cart-indicator">
-
-            </div>
-
-            <!-- Item -->
-            <section id="display-cart-items">
-
-            </section>
-
-            <!-- Order Summary -->
-            <table>
-                <tr id="checkout-categories">
-                    <td>Subtotal</td>
-                    <td>Total (with GST)</td>
-                    <td>Shipping Total Calculated at Checkout</td>
-                </tr>
-                <tr id="checkout-details">
-                    <td id="subtotal-value"></td>
-                    <td id="total-value"></td>
-                </tr>
-            </table>
+        <!-- Item -->
+        <section id="display-cart-items">
 
         </section>
+
+        <!-- Order Summary -->
+        <table>
+            <tr id="checkout-categories">
+                <td>Subtotal</td>
+                <td>Total (with GST)</td>
+                <td>Shipping Total Calculated at Checkout</td>
+            </tr>
+            <tr id="checkout-details">
+                <td id="subtotal-value"></td>
+                <td id="total-value"></td>
+            </tr>
+        </table>
+
+    </section>
 
     <footer>
         <!-- Logo and links in Footer (top) -->
@@ -206,7 +222,7 @@
 
             <div class="footer-brand">
                 <img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo">
-                <p>Handcrafted kennels built for Australian dogs and Australian conditions.</p>
+                <h1>The perfect kennel.</h1>
             </div>
 
             <div class="footer-links">
@@ -231,7 +247,7 @@
         
             <div class="footer-bottom">
                 <p class="footer-acknowledgement">
-                    <strong>Acknowledgement</strong><br>
+                    <span>Acknowledgement</span><br>
                     Kustom Kennels acknowledges the traditional owners of the country where we work and live, the Bunurong and Wurundjeri Woi Wurrung people of the Kulin Nation.
                 </p>
             </div> 
