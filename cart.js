@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // CART OVERLAY //
     // Create variables 1) open cart 2) show cart 3) close cart //
+    // 4) add to cart btn (product list) 5) feedback to user
     const cartIcon = document.querySelector('#nav-cart')
     const cart = document.querySelector('#cart-overlay')
     const cartClose = document.querySelector('#cart-close-btn')
+
+    const addCartBtns = document.querySelectorAll('.product-card button')
+    const message = document.getElementById("cart-message");
 
     // When cart icon is clicked, add class "open" to the overlay - this will make it visible
     cartIcon.addEventListener("click", (event) => {
@@ -71,7 +75,7 @@ function displayInCart() {
     // empty cart
     if (cart.length === 0) {
         if (countEl) countEl.textContent = ""
-        cartContainer.innerHTML = `<div class="cart-empty">Your cart is empty.</div>`
+        cartContainer.innerHTML = `<div class="cart-empty">Your cart is empty. <br> <a href="product-list.html"     class="btn-continue">Continue shopping</a></div>`
     if (footerEl) footerEl.innerHTML = ""
     return
   }
@@ -102,8 +106,7 @@ function displayInCart() {
                         <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
                     </ul>
 
-                    <!-- Trash -->
-                    <button class="cart-trash" onclick="removeItem(${item.id})"><img src="icons/trash-red.png" alt="Trash can icon"></button>
+                
                 </div>
             </div>
         `

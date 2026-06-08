@@ -637,6 +637,7 @@ header {
     border-radius: 10px;
     color: white;
     font-size: medium;
+    box-sizing: border-box;
 }
 
 #cart-overlay {
@@ -644,13 +645,19 @@ header {
     top: 0;
     right: 0;
     visibility: hidden;
-    width: 25vw;
-    height: 100%;
+    width: 30vw;
+    height: 100vh;
     background-color: white;
+    background: rgba(white, 0.5);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 3%;
+    padding: 1%;
     z-index: 1000;
-    overflow: auto;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -665,10 +672,28 @@ header {
     visibility: visible;
 }
 
+
+@media (max-width: 1000px) {
+    #cart-overlay {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 800px) {
+    #cart-overlay {
+        width: 40vw;
+    }
+}
+
 @media (max-width: 700px) {
     #cart-overlay {
-        width: 75vw;
+        width: 70vw;
     }
+}
+
+.cart-empty {
+    padding-top: 1.5rem;
+    text-align: center;
 }
 
 /* CART HEADER */
@@ -691,6 +716,7 @@ header {
 
 /* CART ITEMS */
 #display-cart-items {
+    flex: 1;
     overflow-y: auto;
 }
 
@@ -757,11 +783,12 @@ header {
 }
 
 /* ORDER SUMMARY */
-.cart-footer {
+#cart-footer {
     border-top: 1px solid #ebebeb;
+
     padding: 1.25rem 1.5rem 1.5rem;
-    flex-shrink: 0;
     background: #fff;
+
 }
 
 .cart-summary-row {
@@ -801,7 +828,6 @@ header {
   /* Checkout button */
 .btn-checkout {
     display: block;
-    width: 100%;
     margin-top: 1rem;
     padding: 14px;
     background: #1a1a1a;
@@ -816,13 +842,15 @@ header {
     text-decoration: none;
 }
  
-.btn-checkout:hover { opacity: 0.85; }
+.btn-checkout:hover { 
+    opacity: 0.85; 
+}
  
 .btn-continue {
     display: block;
-    width: 100%;
+
     margin-top: 8px;
-    padding: 8px;
+    padding: 3%;
     background: none;
     border: none;
     font-size: 13px;
@@ -1221,4 +1249,28 @@ footer hr {
         display: flex;
         gap: 2rem;
     }
+}
+
+
+/*------ FEEDBACK TO USER OVERLAY ------------------------------------------------------*/
+
+#cart-message {
+    background-color: white;
+    color: black;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+
+    padding: 1rem;
+    border-radius: 8px;
+
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    transition: top 0.3s ease;
+}
+
+#cart-message.show {
+    top: 5rem;
 }

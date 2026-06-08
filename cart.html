@@ -19,7 +19,7 @@
             <div class="nav-logo">
                 <a href=""><img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo"></a>
 
-                <img class="hamburger" id="hamburgerIcon" src="icons/hamburger-blk.png" alt="Hamburger icon">
+                <img class="hamburger" id="hamburgerIcon" src="icons/hamburger-blk.svg" alt="Hamburger icon">
             </div>
 
             <!-- MIDDLE -->
@@ -37,12 +37,23 @@
 
             <!-- RIGHT -->
             <div class="right-icons">
-                <a id="nav-profile" href=""><img src="icons/user-profile-blk.png" alt="User Profile icon"></a>
+                <a id="nav-profile" href=""><img src="icons/user-profile-blk.svg" alt="User Profile icon"></a>
 
-                <a id="nav-search" href=""><img src="icons/search-blk.png" alt="Search icon"></a>
-                <a id="nav-cart" href=""><img src="icons/cart-blk.png" alt="Shopping Cart icon"></a>
+                <a id="nav-search" href=""><img src="icons/search-blk.svg" alt="Search icon"></a>
+                <a id="nav-cart" href=""><img src="icons/cart-blk.svg" alt="Shopping Cart icon"></a>
             </div>
         </nav>
+
+        <!-- OVERLAY -->
+        <div id="navOverlay"></div>
+
+        <!-- MOBILE SIDEBAR -->
+        <div id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="product-list.html">Shop</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>  
 
         <main id="cartPage">
 
@@ -83,30 +94,30 @@
             </aside>
             
             
-            <!-- Cart Overlay -->
-            <section id="cart-overlay">
+        <!-- Cart Overlay -->
+        <section id="cart-overlay">
 
-                <!-- Cart header -->
-                <section>
-                    <div>
-                        <div class="cart-overlay-title">Your cart</div>
-                        <div class="cart-overlay-meta" id="cart-count"></div>
-                    </div>
+            <!-- Cart header -->
+            <section class="cart-overlay-header">
+                <div>
+                    <div class="cart-overlay-title">Your cart</div>
+                    <div class="cart-overlay-meta" id="cart-count"></div>
+                </div>
 
-                    <!-- Close Overlay Button -->
-                    <button id="cart-close-btn">
-                        &#x2715
-                    </button>
-                </section>
-
-
-                <!-- Items -->
-                <section id="display-cart-items"></section>
-
-                <!-- Order Summary -->
-                <div id="cart-footer"></div>
-
+                <!-- Close Overlay Button -->
+                <button id="cart-close-btn">
+                    &#x2715
+                </button>
             </section>
+
+
+            <!-- Items -->
+            <section id="display-cart-items"></section>
+
+            <!-- Order Summary -->
+            <div id="cart-footer"></div>
+
+        </section>
 
         </main>
 
@@ -117,7 +128,7 @@
 
             <div class="footer-brand">
                 <img src="kk-website-images/kk-logo.png" alt="Kustom Kennels logo">
-                <p>Handcrafted kennels built for Australian dogs and Australian conditions.</p>
+                <h1>The perfect kennel.</h1>
             </div>
 
             <div class="footer-links">
@@ -142,7 +153,7 @@
         
             <div class="footer-bottom">
                 <p class="footer-acknowledgement">
-                    <strong>Acknowledgement</strong><br>
+                    <span>Acknowledgement</span><br>
                     Kustom Kennels acknowledges the traditional owners of the country where we work and live, the Bunurong and Wurundjeri Woi Wurrung people of the Kulin Nation.
                 </p>
             </div> 

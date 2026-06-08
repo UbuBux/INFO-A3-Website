@@ -40,6 +40,10 @@ function addCard(image, name, price, id, cardName) {
         event.stopPropagation()
 
         addToCart(id)
+
+        const cart = document.querySelector('#cart-overlay')
+        cart.classList.add("open-cart")
+
     }
 
     newDiv.onclick = function () {

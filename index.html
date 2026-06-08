@@ -185,36 +185,29 @@
     </section>   
 
     <!-- Cart Overlay -->
-    <section id="cart-overlay">
-        <!-- Close Overlay Button -->
-        <button id="cart-close-btn">
-            close
-        </button>
+        <section id="cart-overlay">
 
-        <!-- Cart icon with number -->
-        <div class="cart-indicator">
+            <!-- Cart header -->
+            <section class="cart-overlay-header">
+                <div>
+                    <div class="cart-overlay-title">Your cart</div>
+                    <div class="cart-overlay-meta" id="cart-count"></div>
+                </div>
 
-        </div>
+                <!-- Close Overlay Button -->
+                <button id="cart-close-btn">
+                    &#x2715
+                </button>
+            </section>
 
-        <!-- Item -->
-        <section id="display-cart-items">
+
+            <!-- Items -->
+            <section id="display-cart-items"></section>
+
+            <!-- Order Summary -->
+            <div id="cart-footer"></div>
 
         </section>
-
-        <!-- Order Summary -->
-        <table>
-            <tr id="checkout-categories">
-                <td>Subtotal</td>
-                <td>Total (with GST)</td>
-                <td>Shipping Total Calculated at Checkout</td>
-            </tr>
-            <tr id="checkout-details">
-                <td id="subtotal-value"></td>
-                <td id="total-value"></td>
-            </tr>
-        </table>
-
-    </section>
 
     <footer>
         <!-- Logo and links in Footer (top) -->
