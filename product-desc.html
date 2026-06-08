@@ -190,14 +190,67 @@
             <h5>Pay in 4 interest-free payments<br>
             with  <img class="paypal-img" src="icons/paypal.png" alt="PayPal Logo"></h5>
 
-            <!-- Divider -->
-            <img src="icons/small-divider.png" alt="Page divider">
+            <hr>
 
+            <!-- Customisation -->
+            <p class="category">Customise your Kennel</p>
 
+            <div class="customisation-field">
+                <select name="colour" id="colour-dropdown">
+                    <option value="" selected disabled>Colour</option>
+                    <option value="surfmist">Surfmist</option>
+                    <option value="evening-haze">Evening Haze</option>
+                    <option value="classic-cream" id="classic-cream-op">Classic Cream</option>
+                    <option value="paperbark" id="paperbark-op">Paperbark</option>
+                    <option value="shale-grey" id="shale-grey-op">Shale Grey</option>
+                    <option value="dune" id="dune-op">Dune</option>
+                    <option value="cove" id="cove-op">Cove</option>
+
+                    <option value="gully" id="gully-op">Gully</option>
+                    <option value="mangrove" id="mangrove-op">Mangrove</option>
+                    <option value="deep-ocean" id="deep-ocean-op">Deep Ocean</option>
+                    <option value="cottage-green" id="cottage-green-op">Cottage Green</option>
+                    <option value="wallaby" id="wallaby-op">Wallaby</option>
+                    <option value="jasper" id="jasper-op">Jasper</option>
+                    <option value="basalt" id="basalt-op">Basalt</option>
+
+                    <option value="pale-euc" id="pale-euc-op">Pale Eucalyptus</option>
+                    <option value="wood-grey" id="wood-grey-op">Woodland Grey</option>
+                    <option value="windspray" id="windspray-op">Windspray</option>
+                    <option value="manor-red" id="manor-red-op">Manor Red</option>
+                    <option value="night-sky" id="night-sky-op">Night Sky</option>
+                    <option value="terrain" id="terrain-op">Terrain</option>
+
+                </select>
+            </div>
+
+            <div class="customisation-field">
+                <select name="door" id="door-position-dropdown">
+                    <option value="" selected disabled>Door Position</option>
+                    <option value="left">Left</option>
+                    <option value="centre">Centre</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+
+            <div class="customisation-field">
+                <select name="legs" id="legs-dropdown">
+                    <option value="" selected disabled>Kennel Legs</option>
+                    <option value="none">None</option>
+                    <option value="posts">Posts</option>
+                    <option value="wheels">Wheels</option>
+                </select>
+            </div>
+
+            <div class="customisation-field">
+                <textarea id="custom-comment" name="comments"  placeholder="Comments  -  Would you like the roof and walls to be different colours? Explain here..." rows="5" cols="30"></textarea>
+            </div>
+            
+            <hr>
 
             <!-- Buttons -->
             <!-- Quantity -->
-            <p>Quantity</p>
+            <p class="category">Quantity</p>
             <ul id="quantity-buttons">
                 <li><button class="increase-quan">+</button></li>
                 <li>1</li>
