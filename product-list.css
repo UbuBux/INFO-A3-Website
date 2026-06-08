@@ -1,5 +1,6 @@
 main {
     display: flex;
+
 }
 
 /* mobiel */
@@ -9,12 +10,14 @@ main {
 
 #shop-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 5%;
     margin-top: 0%;
+
+    min-height: 60vh;
 }
 
 /* PRODUCT GRID INFORMATION (ASIDE) */
@@ -24,7 +27,7 @@ main {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 30vw;
+    max-width: 30vw;
     padding: 2%;
     padding-left: 5%;
     padding-right: 5%;

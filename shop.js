@@ -2,6 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showProducts()
 
+    displayProducts(products)
+
+    document
+        .querySelector("#searchBar")
+        .addEventListener("input", applyFilters)
+
+    document
+        .querySelector("#sortBy")
+        .addEventListener("change", applyFilters)
+
+    document
+        .querySelectorAll(".shopCheckboxes input")
+        .forEach(box => {
+            box.addEventListener("change", applyFilters)
+        })
+
 })
 
 // ADD A PRODUCT CARD //
@@ -66,4 +82,87 @@ function showProducts() {
 
     }
     
+}
+
+
+
+// FUNCTION TO RENDER NEW GRID BASED ON filteredProducts ARRAY //
+
+function displayProducts(productList) {
+
+    const shopGrid = document.querySelector("#shop-grid")
+
+    shopGrid.innerHTML = ""
+
+    productList.forEach(product => {
+
+        addCard(
+            product.image,
+            product.name,
+            product.price,
+            product.id,
+            "product-card"
+        );
+
+    });
+
+}
+
+
+// FUNCTION TO FILTER OUT THE SHOP GRID - SEARCH/FILTER/SORT //
+
+function applyFilters() {
+
+    let filteredProducts = [...products]
+
+    // SEARCH
+    const searchText = document
+        .querySelector("#searchBar")
+        .value
+        .toLowerCase()
+
+    filteredProducts = filteredProducts.filter(product =>
+        product.name.toLowerCase().includes(searchText)
+    )
+
+    // FILTERS
+    const selectedCategories = []
+
+    if (document.querySelector("#standardKennels").checked)
+        selectedCategories.push("standard")
+
+    if (document.querySelector("#klassicKennels").checked)
+        selectedCategories.push("klassic")
+
+    if (document.querySelector("#cottageKennels").checked)
+        selectedCategories.push("cottage")
+
+    if (document.querySelector("#bungalowKennels").checked)
+        selectedCategories.push("bungalow")
+
+    if (document.querySelector("#deluxeKennels").checked)
+        selectedCategories.push("deluxe")
+
+    if (document.querySelector("#doubleKennels").checked)
+        selectedCategories.push("double")
+
+    if (selectedCategories.length > 0) {
+        filteredProducts = filteredProducts.filter(product =>
+            selectedCategories.includes(product.category)
+        );
+    }
+
+    // SORT
+    const sortValue = document.querySelector("#sortBy").value
+
+    if (sortValue === "lowest") {
+        filteredProducts.sort((a, b) => a.price - b.price)
+    }
+
+    if (sortValue === "highest") {
+        filteredProducts.sort((a, b) => b.price - a.price)
+    }
+
+    displayProducts(filteredProducts)
+
 }

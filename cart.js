@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = document.querySelector('#cart-overlay')
     const cartClose = document.querySelector('#cart-close-btn')
 
-    const addCartBtns = document.querySelectorAll('.product-card button')
-    const message = document.getElementById("cart-message");
 
     // When cart icon is clicked, add class "open" to the overlay - this will make it visible
     cartIcon.addEventListener("click", (event) => {
@@ -61,7 +59,7 @@ function addToCart(productId) {
 }
 
 // Shipping //
-const standardShippingCost           = 25      // standard   
+const standardShippingCost  = 25      // standard   
 const freeShippingThreshold = 1000    // spend 1000 get free shippoing
  
 
@@ -101,9 +99,9 @@ function displayInCart() {
 
                     <!-- Quantity -->
                     <ul id="quantity-buttons">
-                        <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
-                        <li>${item.quantity}</li>
                         <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
+                        <li>${item.quantity}</li>
+                        <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
                     </ul>
 
                 

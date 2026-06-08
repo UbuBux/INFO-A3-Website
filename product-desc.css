@@ -105,13 +105,13 @@ main {
     flex-direction: column;
     margin-bottom: 5%;
     padding-top: 4rem;
-
 }
 
 .product-desc-right h2 {
     text-align: left;
     margin: 0;
     margin-bottom: 0.5em;
+    padding-left: 2%;
     font-weight: 600;
 }
 
@@ -119,6 +119,7 @@ main {
     text-align: left;
     margin: 0;
     margin-bottom: 0.5em;
+    padding-left: 2%;
     font-weight: 400;
 }
 
@@ -126,12 +127,14 @@ main {
     text-align: left;
     margin: 0;
     margin-bottom: 0.5em;
+    padding-left: 2%;
     align-content: center;
 }
 
 .product-desc-right p {
     text-align: left;
     margin-bottom: 0;
+    padding-left: 2%;
 }
 
 .paypal-img {
@@ -154,6 +157,7 @@ hr {
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding-left: 2%;
 }
 
 .customisation-field select {

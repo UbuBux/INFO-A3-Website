@@ -13,6 +13,7 @@ function displayCartPage() {
     const emptyState     = document.getElementById("cp-empty-state")
     const subtotalEl     = document.getElementById("subtotal-value")
     const totalEl        = document.getElementById("total-value")
+    const shippingEl     = document.getElementById("shipping-value")
 
     // Only run on the cart page
     if (!itemsContainer) return
@@ -40,18 +41,10 @@ function displayCartPage() {
 
             <div class="cart-beside">
             <h3>${item.name}</h3>
-            <h4>$${item.price.toFixed(2)}</h4>
-            <ul id="quantity-buttons">
-                <li><button class="increase-quan" onclick="increaseQuan(${item.id})">+</button></li>
-                <li>${item.quantity}</li>
-                <li><button class="decrease-quan" onclick="decreaseQuan(${item.id})">-</button></li>
-            </ul>
-            </div>
+            <h4>($${item.price.toFixed(2)} x ${item.quantity})</h4>
 
             <div class="cp-item-right">
             <span class="cp-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
-                <button class="cart-trash" onclick="removeItem(${item.id})"><img src="icons/trash-red.png" alt="Trash can icon"></button>
-            </button>
             </div>
 
         </div>
@@ -61,9 +54,11 @@ function displayCartPage() {
     // ORDER SUMMARY //
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
     const tax      = subtotal * 0.1     // 10% tax
-    const total    = subtotal + tax
+    const shipping  = subtotal >= freeShippingThreshold ? 0 : standardShippingCost
+    const total     = subtotal + shipping
 
     if (subtotalEl) subtotalEl.textContent = "$" + subtotal.toFixed(2)
+    if (shippingEl) shippingEl.textContent = "Free!"
     if (totalEl)    totalEl.textContent    = "$" + total.toFixed(2)
 
 }

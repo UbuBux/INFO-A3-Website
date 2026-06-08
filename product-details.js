@@ -26,7 +26,14 @@ function showDetails() {
     document.getElementById("product-price").textContent = "$" + product.price
 
     let button = document.getElementById('addToCartBtn')
-    button.onclick = () => addToCart(productId)
+    button.onclick = function () {
+
+        addToCart(productId)
+
+        const cart = document.querySelector('#cart-overlay')
+        cart.classList.add("open-cart")
+
+    }
 }
 
 document.querySelectorAll(".acc-trigger").forEach(button => {
@@ -36,22 +43,22 @@ document.querySelectorAll(".acc-trigger").forEach(button => {
 });
 
 function toggleAccordion(button) {
-    const currentItem = button.parentElement;
+    const currentItem = button.parentElement
 
     document.querySelectorAll(".acc-item").forEach(item => {
         if (item !== currentItem) {
-            item.classList.remove("active");
-            item.querySelector(".acc-body").style.maxHeight = null;
+            item.classList.remove("active")
+            item.querySelector(".acc-body").style.maxHeight = null
         }
-    });
+    })
 
-    currentItem.classList.toggle("active");
+    currentItem.classList.toggle("active")
 
-    const body = currentItem.querySelector(".acc-body");
+    const body = currentItem.querySelector(".acc-body")
 
     if (currentItem.classList.contains("active")) {
-        body.style.maxHeight = body.scrollHeight + "px";
+        body.style.maxHeight = body.scrollHeight + "px"
     } else {
-        body.style.maxHeight = null;
+        body.style.maxHeight = null
     }
 }
