@@ -891,6 +891,19 @@ header {
     border-radius: 10px;
 }
 
+#product-desc-right #quantity-buttons {
+    list-style-type: none;
+    padding-inline-start: 0;
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    
+    padding: 2% 5%;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center
+}
+
 #quantity-buttons button {
     border: none;
     font-size: 1.5em;
@@ -1301,28 +1314,8 @@ footer hr {
         display: flex;
         gap: 2rem;
     }
-}
 
-
-/*------ FEEDBACK TO USER OVERLAY ------------------------------------------------------*/
-
-#cart-message {
-    background-color: white;
-    color: black;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
-
-    padding: 1rem;
-    border-radius: 8px;
-
-    position: fixed;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-
-    transition: top 0.3s ease;
-}
-
-#cart-message.show {
-    top: 5rem;
+    .footer-brand h1 {
+        text-align: left;
+    }
 }

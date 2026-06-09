@@ -20,10 +20,13 @@ function showDetails() {
     console.log(product)
 
 
-    document.getElementById("product-path-name").textContent = product.name
+    document.getElementById("product-path-name-desktop").textContent = product.name
+    document.getElementById("product-path-name-mobile").textContent = product.name
     document.getElementById("pro-img-1").src = product.image
+    document.getElementById("pro-img-2").src = product.image
     document.getElementById("product-name").textContent = product.name
     document.getElementById("product-price").textContent = "$" + product.price
+    document.getElementById("product-dimensions").textContent = product.dimensions
 
     let button = document.getElementById('addToCartBtn')
     button.onclick = function () {
@@ -62,3 +65,6 @@ function toggleAccordion(button) {
         body.style.maxHeight = null
     }
 }
+
+
+
