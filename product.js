@@ -5,7 +5,7 @@ let products = [
         price: 799.00, 
         image: "kk-website-images/standard-small.png",
         category: "standard",
-        dimensions: "Externally (mm) : 750w x 600d x 750h + 300mm front overhang. Internally: 50mm less all round. Weight: 15-20kg"
+        dimensions: "Externally (mm) : 750w x 600d x 750h + 300mm front overhang. Internally: 50mm less all round. Weight: 15-20kg",
     },
     {
         id: 1,
@@ -13,7 +13,7 @@ let products = [
         price: 999.00,
         category: "standard",
         image: "kk-website-images/standard-medium.png",
-        
+        dimensions: "Externally: 950 (W) x 750 (D) x 850 (H) + 300 (D) roof overhang. Internally: 900 (W) x 700 (D) x 750 (H)",
     },
     {
         id: 2,
@@ -21,6 +21,7 @@ let products = [
         price: 1299.00,
         category: "standard",
         image: "kk-website-images/standard-large.png",
+        dimensions: "Externally (mm): 1200w x 900d x 950h + 300mm front overhang. Internally: 50mm less all round. Weight: 30-35kg.",
     },
     {
         id: 3,
@@ -28,6 +29,7 @@ let products = [
         price: 1499.00,
         category: "standard",
         image: "kk-website-images/standard-x-large.png",
+        dimensions: "Externally (mm): 1400w x 1000d x 950h + 300mm front overhang. Internally: 50mm less all round. Weight: 35-40kg.",
     },
     {
         id: 4,
@@ -35,6 +37,7 @@ let products = [
         price: 1899.00,
         category: "standard",
         image: "kk-website-images/standard-xx-large.png",
+        dimensions: "Externally (mm): 2000w x 1000d x 950h + 300mm front overhang. Internally: 50mm less all round. Weight: 45-50kg.",
     },
     {
         id: 5,
@@ -42,6 +45,7 @@ let products = [
         price: 899.00,
         category: "klassic",
         image: "kk-website-images/klassic-SML.png",
+        dimensions: "Exterior base (mm): Small - 600w x 800d x 1000h + 150mm front overhang. Medium - 750w x 950d x 1100h + 150mm front overhang. Large - 900w x 1200d x 1200h + 150mm front overhang. All sizes include an addition 150mm of roof overhang. Internally they are 50mm less all round.",
     },
     {
         id: 6,
@@ -49,6 +53,7 @@ let products = [
         price: 2999.00,
         category: "cottage",
         image: "kk-website-images/cottage-kennel.png",
+        dimensions: "Externally: 1000 (W) x 1800 (D) x 1100 (H). Internally: 950 (W) x 950 (D) x 1000 (H). Enclosed section 1000 (w) x 1000 (d), deck area 1000 (w) x 800 (d).",
     },
     {
         id: 7,
@@ -56,6 +61,7 @@ let products = [
         price: 2199.00,
         category: "bungalow",
         image: "kk-website-images/bungalow-kennel.png",
+        dimensions: "Externally: 1000w x 1500d x 1000h. Enclosed section 1000w x 900d - deck area 1000w x 600d. Note: inner dimensions 50mm less.",
     },
     {
         id: 8,
@@ -63,6 +69,7 @@ let products = [
         price: 2499.00,
         category: "deluxe",
         image: "kk-website-images/deluxe-kennel.png",
+        dimensions: "2000mm wide x 1000mm depth x 950mm highest point. Decking: 800mm wide x 1000mm depth. Enclosed space: 1200mm wide x WIDTH 1000mm depth. Note: inner dimensions 50mm less.",
     },
     {
         id: 9,
@@ -70,6 +77,7 @@ let products = [
         price: 3499.00,
         category: "bungalow",
         image: "kk-website-images/large-bungalow.png",
+        dimensions: "Externally: 2000 (W) x 1500 (D) x 1050 (H). Internally: 1950 (W) x 1450 (D) x 950 (H). Enlcosed section 2000 (w) x 900 (d), deck area 2000 (w) x 600 (d).",
     },
     {
         id: 10,
@@ -77,6 +85,7 @@ let products = [
         price: 1599.00,
         category: "double",
         image: "kk-website-images/double-medium.png",
+        dimensions: "Medium external measurements - 1400 (W) x 900(D) + 300(front overhang) x 750 (H).",
     },
     {
         id: 11,
@@ -84,6 +93,7 @@ let products = [
         price: 1999.00,
         category: "double",
         image: "kk-website-images/double-large.png",
+        dimensions: "Externally: 2000 (W) x 1000 (D) x 950 (H). Internally: 1950 (W) x 950 (D) x 950 (H).",
     },
 
 ]
