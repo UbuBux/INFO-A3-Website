@@ -1,4 +1,81 @@
-/* NAVIGATION BAR */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: white;
+    max-width: 100vw;
+}
+
+.order-confirmation {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-order-confirmation {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* titles/headings of pages - used sparingly */
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+/* to complement H1 */
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* product names - cards/prod desc pages */
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* product price - cards/prod desc */
+h4 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* small bodies of text - descriptions, testimonials */
+h5 {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* BUTTONS */
+button {
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    padding: 3%;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+
+/*------ NAVIGATION BAR ------------------------------------------------------*/
 /* Nav bar bg colour */
 nav {
     background-color: white;
